@@ -1,1 +1,6 @@
-/Sort/Sort.sdf
+/Sort/*.sdf
+/Sort/*.opensdf
+/Sort/Sort.v12.suo
+/Sort/Debug
+/Basic/Basic/Debug
+/Sort/Sort/Debug
