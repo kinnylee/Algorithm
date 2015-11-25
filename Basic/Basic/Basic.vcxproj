@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}</ProjectGuid>
+    <ProjectGuid>{15FDE077-FD47-4240-A598-54FC934D0089}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Sort</RootNamespace>
+    <RootNamespace>Basic</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -53,7 +53,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\include\Sort;..\..\include\Basic</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\Basic</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -70,7 +70,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\include\Sort;..\..\include\Basic</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\Basic</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,13 +80,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\Sort\Sort.h" />
-    <ClInclude Include="..\..\include\Sort\SortTest.h" />
+    <ClInclude Include="..\..\include\Basic\BinaryArray.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Sort\main.cpp" />
-    <ClCompile Include="..\..\src\Sort\Sort.cpp" />
-    <ClCompile Include="..\..\src\Sort\SortTest.cpp" />
+    <ClCompile Include="..\..\src\Basic\BinaryArray.cpp" />
+    <ClCompile Include="..\..\src\Basic\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
