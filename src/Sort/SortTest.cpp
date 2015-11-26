@@ -26,3 +26,9 @@ void SortTest::PrintOut()
     std::cout << std::endl;
 }
 
+void SortTest::RecursionInsertSortTest()
+{
+    Sort::RecursionInsertSort(s_array, s_nArraySize);
+    PrintOut();
+}
+

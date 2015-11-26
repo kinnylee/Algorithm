@@ -18,3 +18,19 @@ void Sort::InsertSort(int a[], int n)
     }
 }
 
+void Sort::RecursionInsertSort(int a[], int n)
+{
+    if (n > 1)
+    {
+        int nPos = n - 1;
+        RecursionInsertSort(a, nPos);
+        int key = a[nPos];
+        while (nPos >= 0 && a[nPos-1] > key)
+        {
+            a[nPos] = a[nPos-1];
+            nPos--;
+        }
+        a[nPos] = key;
+    }
+}
+

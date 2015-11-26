@@ -8,9 +8,10 @@ unsigned b[10] = { 1, 0, 0, 1, 1, 0, 0, 1, 1, 1 };
 
 int main()
 {
-    SortTest::InsertSortTest();
+   // SortTest::InsertSortTest();
 
     //unsigned *c = new unsigned[11];
     //BinaryArray::Add(a, b, 10, c);
+    SortTest::RecursionInsertSortTest();
     system("pause");
 }
