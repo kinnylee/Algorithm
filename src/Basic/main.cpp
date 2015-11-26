@@ -21,5 +21,7 @@ int main()
 
     //std::cout << Find::RecusionBinarySearch(s_array, 0, s_nArraySize, 8);
     //std::cout << Find::BinarySearch(s_array, 0, s_nArraySize, 3);
+
+    std::cout << Find::FindTwoNumber(s_array, s_nArraySize, 8);
     system("pause");
 }

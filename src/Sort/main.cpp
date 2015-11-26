@@ -14,6 +14,6 @@ int main()
     //BinaryArray::Add(a, b, 10, c);
 
    // SortTest::RecursionInsertSortTest();
-    SortTest::BinaryInsertSortTest();
+  //  SortTest::BinaryInsertSortTest();
     system("pause");
 }

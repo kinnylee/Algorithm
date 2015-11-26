@@ -56,7 +56,7 @@ void Sort::MergeSub(int a[], int nLow, int nHigh)
 
 void Sort::Merge(int a[], int p, int q, int r)
 {
-
+    
 }
 
 void Sort::BinaryInsertSort(int a[], int n)

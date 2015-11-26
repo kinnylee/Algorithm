@@ -1,4 +1,5 @@
 #include "Find.h"
+#include "Sort.h"
 
 int Find::RecusionBinarySearch(int a[], int low, int high, int key)
 {
@@ -59,5 +60,28 @@ int Find::BinaryLocation(int a[], int low, int high, int key)
         }
     }
     return low;
+}
+
+bool Find::FindTwoNumber(int a[], int n, int sum)
+{
+    //sort 
+    Sort::InsertSort(a, n);
+
+    //sort the array, time complexity:nlgn
+   // Sort::MergeSort(a, n);
+
+    bool bResult = false;
+
+    //binray find the x and sum -x
+    for (int i = 0; i < n; ++i)
+    {
+        int nPos1 = Find::BinarySearch(a, 0, n, a[i]);
+        int nPos2 = Find::BinarySearch(a, 0, n, sum - a[i]);
+        if (nPos1 != -1 && nPos2 != -1)
+        {
+            bResult = true;
+        }
+    }
+    return bResult;
 }
 
