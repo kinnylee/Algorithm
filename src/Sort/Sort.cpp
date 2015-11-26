@@ -22,15 +22,19 @@ void Sort::RecursionInsertSort(int a[], int n)
 {
     if (n > 1)
     {
-        int nPos = n - 1;
-        RecursionInsertSort(a, nPos);
-        int key = a[nPos];
-        while (nPos >= 0 && a[nPos-1] > key)
-        {
-            a[nPos] = a[nPos-1];
-            nPos--;
-        }
-        a[nPos] = key;
+        RecursionInsertSort(a, n - 1);
+        RecursionInsertSortSub(a, n - 1);
     }
+}
+
+void Sort::RecursionInsertSortSub(int a[], int nPos)
+{
+    int key = a[nPos];
+    while (nPos >= 0 && a[nPos - 1] > key)
+    {
+        a[nPos] = a[nPos - 1];
+        nPos--;
+    }
+    a[nPos] = key;
 }
 

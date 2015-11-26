@@ -11,4 +11,5 @@ public:
 private:
     void static MergeSub(int a[], int nLow, int nHigh);
     void static Merge(int a[], int p, int q, int r);
+    void static RecursionInsertSortSub(int a[], int nPos);
 };
