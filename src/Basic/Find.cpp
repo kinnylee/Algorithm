@@ -40,5 +40,24 @@ int Find::BinarySearch(int a[], int low, int high, int key)
             low = nMid + 1;
         }
     }
+    return -1;
+}
+
+int Find::BinaryLocation(int a[], int low, int high, int key)
+{
+    while (low <= high)
+    {
+        int nMid = (low + high) / 2;
+
+        if (a[nMid] >= key)
+        {
+            high = nMid -1;
+        }
+        else
+        {
+            low = nMid + 1;
+        }
+    }
+    return low;
 }
 

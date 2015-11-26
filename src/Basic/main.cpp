@@ -13,12 +13,13 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    Sort::InsertSort(s_array, s_nArraySize);
+   // Sort::InsertSort(s_array, s_nArraySize);
+   // Sort::BinaryInsertSort(s_array, s_nArraySize);
 
    // unsigned *c = new unsigned[11];
     //BinaryArray::Add(a, b, 10, c);
 
     //std::cout << Find::RecusionBinarySearch(s_array, 0, s_nArraySize, 8);
-    std::cout << Find::BinarySearch(s_array, 0, s_nArraySize, 3);
+    //std::cout << Find::BinarySearch(s_array, 0, s_nArraySize, 3);
     system("pause");
 }

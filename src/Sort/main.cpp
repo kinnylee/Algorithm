@@ -12,6 +12,8 @@ int main()
 
     //unsigned *c = new unsigned[11];
     //BinaryArray::Add(a, b, 10, c);
-    SortTest::RecursionInsertSortTest();
+
+   // SortTest::RecursionInsertSortTest();
+    SortTest::BinaryInsertSortTest();
     system("pause");
 }

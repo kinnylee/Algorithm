@@ -1,4 +1,5 @@
 #include "Sort.h"
+#include "Find.h"
 
 void Sort::InsertSort(int a[], int n)
 {
@@ -56,5 +57,21 @@ void Sort::MergeSub(int a[], int nLow, int nHigh)
 void Sort::Merge(int a[], int p, int q, int r)
 {
 
+}
+
+void Sort::BinaryInsertSort(int a[], int n)
+{
+    for (int j = 1; j < n; ++j)
+    {
+        int key = a[j];
+        int i = j - 1;
+        int nPos = Find::BinaryLocation(a, 0, i, key);
+        while (nPos <= i)
+        {
+            a[i+1] = a[i];
+            i--;
+        }
+        a[nPos] = key;
+    }
 }
 

@@ -32,3 +32,9 @@ void SortTest::RecursionInsertSortTest()
     PrintOut();
 }
 
+void SortTest::BinaryInsertSortTest()
+{
+    Sort::BinaryInsertSort(s_array, s_nArraySize);
+    PrintOut();
+}
+
