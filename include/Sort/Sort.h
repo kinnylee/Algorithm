@@ -1,6 +1,8 @@
 //sort algorithm
 
-class Sort
+#include "Sort_Global.h"
+
+class SORT_EXPORT Sort
 {
 public:
     void static InsertSort(int a[], int n);

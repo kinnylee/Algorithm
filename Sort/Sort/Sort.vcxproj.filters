@@ -21,6 +21,9 @@
     <ClInclude Include="..\..\include\Sort\SortTest.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\Sort\Sort_Global.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Sort\Sort.cpp">

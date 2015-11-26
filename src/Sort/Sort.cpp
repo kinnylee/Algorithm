@@ -38,3 +38,23 @@ void Sort::RecursionInsertSortSub(int a[], int nPos)
     a[nPos] = key;
 }
 
+void Sort::SelectSort(int a[], int n)
+{
+
+}
+
+void Sort::MergeSort(int a[], int n)
+{
+
+}
+
+void Sort::MergeSub(int a[], int nLow, int nHigh)
+{
+
+}
+
+void Sort::Merge(int a[], int p, int q, int r)
+{
+
+}
+

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sort", "Sort\Sort.vcxproj", "{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Basic", "..\Basic\Basic\Basic.vcxproj", "{15FDE077-FD47-4240-A598-54FC934D0089}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE} = {FA4378B4-6C91-4A96-9A67-671C5CDA24DE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
