@@ -23,10 +23,14 @@ public:
     */
     void static MergeInsertSort(int a[], int n);
 
+    void static BubbleSort(int a[], int n);
+
 private:
     void static MergeSub(int a[], int nLow, int nHigh);
     void static Merge(int a[], int p, int q, int r);
     void static RecursionInsertSortSub(int a[], int nPos);
     void static MergeInsertSortSub(int a[], int nLow, int nHigh, int k);
     void static InsertSub(int a[], int nLow, int nHigh);
+    
+    void static Swap(int &a, int &b);
 };

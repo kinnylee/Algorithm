@@ -50,3 +50,9 @@ void SortTest::MergeInsertSortTest()
     PrintOut();
 }
 
+void SortTest::BubbleSortTest()
+{
+    Sort::BubbleSort(s_array, s_nArraySize);
+    PrintOut();
+}
+

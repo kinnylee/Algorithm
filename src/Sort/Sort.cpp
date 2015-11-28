@@ -150,3 +150,24 @@ void Sort::InsertSub(int a[], int nLow, int nHigh)
     }
 }
 
+void Sort::BubbleSort(int a[], int n)
+{
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = n - 1; j >= i; --j)
+        {
+            if (a[j] < a[j - 1])
+            {
+                Swap(a[j], a[j - 1]);
+            }
+        }
+    }
+}
+
+void Sort::Swap(int &a, int &b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+

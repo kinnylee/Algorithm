@@ -11,6 +11,7 @@ public:
     void static RecursionInsertSortTest();
     void static BinaryInsertSortTest();
     void static MergeInsertSortTest();
+    void static BubbleSortTest();
 
 private:
     void static PrintOut();
