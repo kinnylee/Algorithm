@@ -4,4 +4,7 @@
 /Sort/Debug
 /Basic/Basic/Debug
 /Sort/Sort/Debug
-/lib/*.
+/lib/*.exe
+/lib/*.exp
+/lib/*.ilk
+/lib/*.pdb
