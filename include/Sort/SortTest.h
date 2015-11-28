@@ -10,6 +10,7 @@ public:
     void static MergeSortTest();
     void static RecursionInsertSortTest();
     void static BinaryInsertSortTest();
+    void static MergeInsertSortTest();
 
 private:
     void static PrintOut();

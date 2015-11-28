@@ -38,3 +38,15 @@ void SortTest::BinaryInsertSortTest()
     PrintOut();
 }
 
+void SortTest::MergeSortTest()
+{
+    Sort::MergeSort(s_array, s_nArraySize);
+    PrintOut();
+}
+
+void SortTest::MergeInsertSortTest()
+{
+    Sort::MergeInsertSort(s_array, s_nArraySize);
+    PrintOut();
+}
+

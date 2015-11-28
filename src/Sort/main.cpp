@@ -15,5 +15,7 @@ int main()
 
    // SortTest::RecursionInsertSortTest();
   //  SortTest::BinaryInsertSortTest();
+  //  SortTest::MergeSortTest();
+    SortTest::MergeInsertSortTest();
     system("pause");
 }
