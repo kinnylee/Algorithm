@@ -1,7 +1,6 @@
 #include <process.h>
 #include <iostream>
 
-#include "Sort.h"
 #include "BinaryArray.h"
 #include "Find.h"
 

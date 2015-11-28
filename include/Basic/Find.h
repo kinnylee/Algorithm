@@ -1,4 +1,6 @@
 //find class
+#ifndef _FIND_H_
+#define _FIND_H_
 
 #include "Find_Global.h"
 
@@ -14,3 +16,5 @@ public:
     // need the time complexity is n*lgn
     bool static FindTwoNumber(int a[], int n, int sum);
 };
+
+#endif

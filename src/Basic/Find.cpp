@@ -1,5 +1,4 @@
 #include "Find.h"
-#include "Sort.h"
 
 int Find::RecusionBinarySearch(int a[], int low, int high, int key)
 {
@@ -64,8 +63,8 @@ int Find::BinaryLocation(int a[], int low, int high, int key)
 
 bool Find::FindTwoNumber(int a[], int n, int sum)
 {
-    //sort 
-    Sort::InsertSort(a, n);
+    //sort todo
+    //Sort::InsertSort(a, n);
 
     //sort the array, time complexity:nlgn
    // Sort::MergeSort(a, n);
