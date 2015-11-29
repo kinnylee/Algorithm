@@ -89,13 +89,17 @@
     <ClInclude Include="..\..\include\Basic\BinaryArray.h" />
     <ClInclude Include="..\..\include\Basic\Find.h" />
     <ClInclude Include="..\..\include\Basic\Find_Global.h" />
+    <ClInclude Include="..\..\include\Basic\Inversion.h" />
     <ClInclude Include="..\..\include\Basic\Polynome.h" />
+    <ClInclude Include="..\..\src\Basic\Test\PolynomeTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Basic\BinaryArray.cpp" />
     <ClCompile Include="..\..\src\Basic\Find.cpp" />
+    <ClCompile Include="..\..\src\Basic\Inversion.cpp" />
     <ClCompile Include="..\..\src\Basic\main.cpp" />
     <ClCompile Include="..\..\src\Basic\Polynome.cpp" />
+    <ClCompile Include="..\..\src\Basic\Test\PolynomeTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

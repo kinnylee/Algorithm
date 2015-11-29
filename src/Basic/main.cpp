@@ -3,6 +3,9 @@
 
 #include "BinaryArray.h"
 #include "Find.h"
+#include "Polynome.h"
+#include "Inversion.h"
+#include "Test/PolynomeTest.h"
 
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
 unsigned b[10] = { 1, 0, 0, 1, 1, 0, 0, 1, 1, 1 };
@@ -21,6 +24,12 @@ int main()
     //std::cout << Find::RecusionBinarySearch(s_array, 0, s_nArraySize, 8);
     //std::cout << Find::BinarySearch(s_array, 0, s_nArraySize, 3);
 
-    std::cout << Find::FindTwoNumber(s_array, s_nArraySize, 8);
+    //std::cout << Find::FindTwoNumber(s_array, s_nArraySize, 8);
+   
+    //Polynome poly = PolynomeTest::Add();
+    //std::cout << poly.ToString();
+    //std::cout << poly.GetValue(1);
+
+    std::cout << Inversion::FindInversion(s_array, s_nArraySize);
     system("pause");
 }

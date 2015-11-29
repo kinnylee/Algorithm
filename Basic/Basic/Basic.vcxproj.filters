@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Test">
+      <UniqueIdentifier>{395f6a10-9ea8-4611-97f5-4242157244f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Basic\BinaryArray.h">
@@ -27,6 +30,12 @@
     <ClInclude Include="..\..\include\Basic\Polynome.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\Basic\Test\PolynomeTest.h">
+      <Filter>源文件\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Basic\Inversion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Basic\BinaryArray.cpp">
@@ -39,6 +48,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Basic\Polynome.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Basic\Test\PolynomeTest.cpp">
+      <Filter>源文件\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Basic\Inversion.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
