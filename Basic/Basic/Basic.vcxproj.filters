@@ -36,6 +36,9 @@
     <ClInclude Include="..\..\include\Basic\Inversion.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\Basic\MaxSubArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Basic\BinaryArray.cpp">
@@ -54,6 +57,9 @@
       <Filter>源文件\Test</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Basic\Inversion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Basic\MaxSubArray.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

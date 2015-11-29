@@ -5,6 +5,7 @@
 #include "Find.h"
 #include "Polynome.h"
 #include "Inversion.h"
+#include "MaxSubArray.h"
 #include "Test/PolynomeTest.h"
 
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
@@ -30,6 +31,12 @@ int main()
     //std::cout << poly.ToString();
     //std::cout << poly.GetValue(1);
 
-    std::cout << Inversion::FindInversion(s_array, s_nArraySize);
+    //std::cout << Inversion::FindInversion(s_array, s_nArraySize);
+
+    int nLowPos = 0, nHighPos = 0, nMaxValue = 0;
+    nMaxValue = MaxSubArray::FindMaxValue(s_array, s_nArraySize, nLowPos, nHighPos);
+    std::cout << nMaxValue << std::endl;
+    std::cout << nLowPos << std::endl;
+    std::cout << nHighPos << std::endl;
     system("pause");
 }
