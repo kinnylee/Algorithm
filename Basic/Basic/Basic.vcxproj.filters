@@ -39,6 +39,12 @@
     <ClInclude Include="..\..\include\Basic\MaxSubArray.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\Basic\Matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Basic\Test\MatrixTest.h">
+      <Filter>源文件\Test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Basic\BinaryArray.cpp">
@@ -61,6 +67,12 @@
     </ClCompile>
     <ClCompile Include="..\..\src\Basic\MaxSubArray.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Basic\Matrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Basic\Test\MatrixTest.cpp">
+      <Filter>源文件\Test</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

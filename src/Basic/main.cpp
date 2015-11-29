@@ -7,6 +7,7 @@
 #include "Inversion.h"
 #include "MaxSubArray.h"
 #include "Test/PolynomeTest.h"
+#include "Test/MatrixTest.h"
 
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
 unsigned b[10] = { 1, 0, 0, 1, 1, 0, 0, 1, 1, 1 };
@@ -33,10 +34,16 @@ int main()
 
     //std::cout << Inversion::FindInversion(s_array, s_nArraySize);
 
+    /*
     int nLowPos = 0, nHighPos = 0, nMaxValue = 0;
     nMaxValue = MaxSubArray::SequenceFindMax(s_array, s_nArraySize, nLowPos, nHighPos);
     std::cout << nMaxValue << std::endl;
     std::cout << nLowPos << std::endl;
     std::cout << nHighPos << std::endl;
+    */
+    
+    MatrixTest::CreateMatrix()->PrintOut();
+    MatrixTest::Add()->PrintOut();
+    MatrixTest::Multiple()->PrintOut();
     system("pause");
 }
