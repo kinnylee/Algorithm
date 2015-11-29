@@ -34,7 +34,7 @@ int main()
     //std::cout << Inversion::FindInversion(s_array, s_nArraySize);
 
     int nLowPos = 0, nHighPos = 0, nMaxValue = 0;
-    nMaxValue = MaxSubArray::FindMaxValue(s_array, s_nArraySize, nLowPos, nHighPos);
+    nMaxValue = MaxSubArray::SequenceFindMax(s_array, s_nArraySize, nLowPos, nHighPos);
     std::cout << nMaxValue << std::endl;
     std::cout << nLowPos << std::endl;
     std::cout << nHighPos << std::endl;

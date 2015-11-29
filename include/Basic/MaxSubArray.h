@@ -4,7 +4,9 @@
 class MaxSubArray
 {
 public:
-    int static FindMaxValue(int a[], int n, int &nLowPos, int &nHighPos);
+    int static MergeFindMax(int a[], int n, int &nLowPos, int &nHighPos);
+    int static ViolenceFindMax(int a[], int n, int &nLowPos, int &nHighPos);
+    int static SequenceFindMax(int a[], int n, int &nLowPos, int &nHighPos);
 
 private:
     int static FindMaxValueSub(
