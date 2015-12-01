@@ -12,6 +12,7 @@ public:
     void static BinaryInsertSortTest();
     void static MergeInsertSortTest();
     void static BubbleSortTest();
+    void static HeapSortTest();
 
 private:
     void static PrintOut();

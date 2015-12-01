@@ -17,6 +17,7 @@ int main()
   //  SortTest::BinaryInsertSortTest();
   //  SortTest::MergeSortTest();
   //  SortTest::MergeInsertSortTest();
-    SortTest::BubbleSortTest();
+  //  SortTest::BubbleSortTest();
+    SortTest::MergeSortTest();
     system("pause");
 }

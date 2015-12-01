@@ -56,3 +56,9 @@ void SortTest::BubbleSortTest()
     PrintOut();
 }
 
+void SortTest::HeapSortTest()
+{
+    Sort::HeapSort(s_array, s_nArraySize);
+    PrintOut();
+}
+

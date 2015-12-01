@@ -171,3 +171,46 @@ void Sort::Swap(int &a, int &b)
     b = temp;
 }
 
+void Sort::HeapSort(int a[], int n)
+{
+    BuildMaxHeap(a, n);
+    for (int i = n - 1; i > 0; i--)
+    {
+        Swap(a[0], a[i]);
+        MaxHeapify(a, n, 0);
+    }
+}
+
+void Sort::MaxHeapify(int a[], int n, int nIndex)
+{
+    int nLeftChild = (nIndex > 1);
+    int nRightChild = nLeftChild + 1;
+
+    //find the max
+    int nLargest = nIndex;
+    if (nLeftChild <= n && a[nLeftChild] > a[nIndex])
+    {
+        nLargest = nLeftChild;
+    }
+    if (nRightChild <= n && a[nRightChild] > nLargest)
+    {
+        nLargest = nRightChild;
+    }
+
+    //if nIndex is not max, exchange it
+    if (nLargest != a[nIndex])
+    {
+        Swap(a[nIndex], a[nLargest]);
+        //maybe already not a max heap 
+        MaxHeapify(a, n, nLargest);
+    }
+}
+
+void Sort::BuildMaxHeap(int a[], int n)
+{
+    for (int i = n / 2; i >= 0; --i)
+    {
+        MaxHeapify(a, n, i);
+    }
+}
+
