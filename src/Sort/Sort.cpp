@@ -1,3 +1,5 @@
+#include "Common.h"
+
 #include "Sort.h"
 #include "Find.h"
 
@@ -158,17 +160,10 @@ void Sort::BubbleSort(int a[], int n)
         {
             if (a[j] < a[j - 1])
             {
-                Swap(a[j], a[j - 1]);
+                Common::Swap(a[j], a[j - 1]);
             }
         }
     }
-}
-
-void Sort::Swap(int &a, int &b)
-{
-    int temp = a;
-    a = b;
-    b = temp;
 }
 
 void Sort::HeapSort(int a[], int n)
@@ -176,7 +171,7 @@ void Sort::HeapSort(int a[], int n)
     BuildMaxHeap(a, n);
     for (int i = n - 1; i > 0; i--)
     {
-        Swap(a[0], a[i]);
+        Common::Swap(a[0], a[i]);
         MaxHeapify(a, n, 0);
     }
 }
@@ -200,7 +195,7 @@ void Sort::MaxHeapify(int a[], int n, int nIndex)
     //if nIndex is not max, exchange it
     if (nLargest != a[nIndex])
     {
-        Swap(a[nIndex], a[nLargest]);
+        Common::Swap(a[nIndex], a[nLargest]);
         //maybe already not a max heap 
         MaxHeapify(a, n, nLargest);
     }

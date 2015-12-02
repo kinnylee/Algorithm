@@ -2,9 +2,9 @@
 #ifndef _FIND_H_
 #define _FIND_H_
 
-#include "Find_Global.h"
+#include "Basic_Global.h"
 
-class FIND_EXPORT Find
+class BASIC_EXPORT Find
 {
 public:
     int static RecusionBinarySearch(int a[], int low, int high, int key);

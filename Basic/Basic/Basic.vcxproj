@@ -17,13 +17,13 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -53,7 +53,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;FIND_LIBRARY;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;BASIC_LIBRARY;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\..\include\Basic</AdditionalIncludeDirectories>
     </ClCompile>
@@ -72,7 +72,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;FIND_LIBRARY;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;BASIC_LIBRARY;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\..\include\Basic</AdditionalIncludeDirectories>
     </ClCompile>
@@ -87,9 +87,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Basic\BinaryArray.h" />
+    <ClInclude Include="..\..\include\Basic\Common.h" />
     <ClInclude Include="..\..\include\Basic\Find.h" />
-    <ClInclude Include="..\..\include\Basic\Find_Global.h" />
+    <ClInclude Include="..\..\include\Basic\Basic_Global.h" />
     <ClInclude Include="..\..\include\Basic\Inversion.h" />
+    <ClInclude Include="..\..\include\Basic\KGlobal.h" />
     <ClInclude Include="..\..\include\Basic\Matrix.h" />
     <ClInclude Include="..\..\include\Basic\MaxSubArray.h" />
     <ClInclude Include="..\..\include\Basic\Polynome.h" />
@@ -98,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Basic\BinaryArray.cpp" />
+    <ClCompile Include="..\..\src\Basic\Common.cpp" />
     <ClCompile Include="..\..\src\Basic\Find.cpp" />
     <ClCompile Include="..\..\src\Basic\Inversion.cpp" />
     <ClCompile Include="..\..\src\Basic\main.cpp" />

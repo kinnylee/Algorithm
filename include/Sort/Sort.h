@@ -36,5 +36,4 @@ private:
     void static MaxHeapify(int a[], int n, int nIndex);
     void static BuildMaxHeap(int a[], int n);
     
-    void static Swap(int &a, int &b);
 };

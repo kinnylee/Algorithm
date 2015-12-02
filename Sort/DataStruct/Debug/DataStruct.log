@@ -1,0 +1,20 @@
+﻿生成启动时间为 2015/12/2 23:45:57。
+     1>项目“E:\Code\MyGit\Algorithm\Sort\DataStruct\DataStruct.vcxproj”在节点 3 上(Build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\DataStruct.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+       Link:
+         D:\program\VisualStudio\2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Code\MyGit\Algorithm\Sort\Debug\DataStruct.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\..\lib Basic.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Code\MyGit\Algorithm\Sort\Debug\DataStruct.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Code\MyGit\Algorithm\Sort\Debug\DataStruct.lib" /MACHINE:X86 /DLL Debug\PriorityQueueHeap.obj
+         {{xgTaskID=00000017}}
+            正在创建库 E:\Code\MyGit\Algorithm\Sort\Debug\DataStruct.lib 和对象 E:\Code\MyGit\Algorithm\Sort\Debug\DataStruct.exp
+         {{xgTaskID=00000000}}
+         DataStruct.vcxproj -> E:\Code\MyGit\Algorithm\Sort\Debug\DataStruct.dll
+       FinalizeBuildStatus:
+         正在删除文件“Debug\DataStruct.tlog\unsuccessfulbuild”。
+         正在对“Debug\DataStruct.tlog\DataStruct.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\Code\MyGit\Algorithm\Sort\DataStruct\DataStruct.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.65

@@ -24,9 +24,6 @@
     <ClInclude Include="..\..\include\Basic\Find.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Basic\Find_Global.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\include\Basic\Polynome.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -44,6 +41,15 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Basic\Test\MatrixTest.h">
       <Filter>源文件\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Basic\Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Basic\KGlobal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Basic\Basic_Global.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="..\..\src\Basic\Test\MatrixTest.cpp">
       <Filter>源文件\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Basic\Common.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
