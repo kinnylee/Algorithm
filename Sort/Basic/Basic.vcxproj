@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}</ProjectGuid>
+    <ProjectGuid>{15FDE077-FD47-4240-A598-54FC934D0089}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Sort</RootNamespace>
+    <RootNamespace>Basic</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -55,15 +55,15 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;SORT_LIBRARY;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;BASIC_LIBRARY;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\include\Sort;..\..\include\Basic</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\Basic</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Basic.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\bin</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -74,28 +74,43 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;SORT_LIBRARY;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;BASIC_LIBRARY;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\include\Sort;..\..\include\Basic</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\Basic</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Basic.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\bin</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\Sort\Sort.h" />
-    <ClInclude Include="..\..\include\Sort\SortTest.h" />
-    <ClInclude Include="..\..\include\Sort\Sort_Global.h" />
+    <ClInclude Include="..\..\include\Basic\BinaryArray.h" />
+    <ClInclude Include="..\..\include\Basic\Common.h" />
+    <ClInclude Include="..\..\include\Basic\Find.h" />
+    <ClInclude Include="..\..\include\Basic\Basic_Global.h" />
+    <ClInclude Include="..\..\include\Basic\Inversion.h" />
+    <ClInclude Include="..\..\include\Basic\KGlobal.h" />
+    <ClInclude Include="..\..\include\Basic\Matrix.h" />
+    <ClInclude Include="..\..\include\Basic\MaxSubArray.h" />
+    <ClInclude Include="..\..\include\Basic\Polynome.h" />
+    <ClInclude Include="..\..\src\Basic\Test\MatrixTest.h" />
+    <ClInclude Include="..\..\src\Basic\Test\PolynomeTest.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Sort\main.cpp" />
-    <ClCompile Include="..\..\src\Sort\Sort.cpp" />
-    <ClCompile Include="..\..\src\Sort\SortTest.cpp" />
+    <ClCompile Include="..\..\src\Basic\BinaryArray.cpp" />
+    <ClCompile Include="..\..\src\Basic\Common.cpp" />
+    <ClCompile Include="..\..\src\Basic\Find.cpp" />
+    <ClCompile Include="..\..\src\Basic\Inversion.cpp" />
+    <ClCompile Include="..\..\src\Basic\main.cpp" />
+    <ClCompile Include="..\..\src\Basic\Matrix.cpp" />
+    <ClCompile Include="..\..\src\Basic\MaxSubArray.cpp" />
+    <ClCompile Include="..\..\src\Basic\Polynome.cpp" />
+    <ClCompile Include="..\..\src\Basic\Test\MatrixTest.cpp" />
+    <ClCompile Include="..\..\src\Basic\Test\PolynomeTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

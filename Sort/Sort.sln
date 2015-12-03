@@ -3,12 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sort", "Sort\Sort.vcxproj", "{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}"
-	ProjectSection(ProjectDependencies) = postProject
-		{15FDE077-FD47-4240-A598-54FC934D0089} = {15FDE077-FD47-4240-A598-54FC934D0089}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Basic", "..\Basic\Basic\Basic.vcxproj", "{15FDE077-FD47-4240-A598-54FC934D0089}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Basic", "Basic\Basic.vcxproj", "{15FDE077-FD47-4240-A598-54FC934D0089}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataStruct", "DataStruct\DataStruct.vcxproj", "{79693A77-C0AE-41BA-AD13-AA850BC42C4B}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -22,16 +17,17 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Main", "Main\Main.vcxproj",
 		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE} = {FA4378B4-6C91-4A96-9A67-671C5CDA24DE}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sort", "Sort\Sort.vcxproj", "{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15FDE077-FD47-4240-A598-54FC934D0089} = {15FDE077-FD47-4240-A598-54FC934D0089}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}.Debug|Win32.ActiveCfg = Debug|Win32
-		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}.Debug|Win32.Build.0 = Debug|Win32
-		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}.Release|Win32.ActiveCfg = Release|Win32
-		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}.Release|Win32.Build.0 = Release|Win32
 		{15FDE077-FD47-4240-A598-54FC934D0089}.Debug|Win32.ActiveCfg = Debug|Win32
 		{15FDE077-FD47-4240-A598-54FC934D0089}.Debug|Win32.Build.0 = Debug|Win32
 		{15FDE077-FD47-4240-A598-54FC934D0089}.Release|Win32.ActiveCfg = Release|Win32
@@ -44,6 +40,10 @@ Global
 		{B30BA690-19CB-4B67-9D58-3DC70FDA43AF}.Debug|Win32.Build.0 = Debug|Win32
 		{B30BA690-19CB-4B67-9D58-3DC70FDA43AF}.Release|Win32.ActiveCfg = Release|Win32
 		{B30BA690-19CB-4B67-9D58-3DC70FDA43AF}.Release|Win32.Build.0 = Release|Win32
+		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}.Debug|Win32.Build.0 = Debug|Win32
+		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}.Release|Win32.ActiveCfg = Release|Win32
+		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
