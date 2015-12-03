@@ -5,7 +5,8 @@
 /Basic/Basic/Debug
 /Sort/Sort/Debug
 /Sort/DataStruct/Debug
-Sort/DataStruct/Debug
+/temp
+
 /lib/*.exe
 /lib/*.exp
 /lib/*.ilk
