@@ -62,3 +62,9 @@ void SortTest::HeapSortTest()
     PrintOut();
 }
 
+void SortTest::QuickSortTest()
+{
+    Sort::QuickSort(s_array, s_nArraySize);
+    PrintOut();
+}
+

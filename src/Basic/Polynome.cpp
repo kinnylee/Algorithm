@@ -7,7 +7,7 @@ Polynome::Polynome(float *coeff, int nMaxExp) : m_nMaxExp(nMaxExp)
         return;
     }
 
-    m_pCoeff = new float(m_nMaxExp);
+    m_pCoeff = new float[m_nMaxExp];
     for (int i = 0; i < m_nMaxExp; ++i)
     {
         m_pCoeff[i] = coeff[i];
@@ -71,7 +71,7 @@ Polynome& operator+(const Polynome &poly1, const Polynome &poly2)
     int nExp = poly1.MaxExp() > poly2.MaxExp() ? poly1.MaxExp() : poly2.MaxExp();
     float *pCoeff1 = poly1.Coeff();
     float *pCoeff2 = poly2.Coeff();
-    float *pCoeff = new float(nExp);
+    float *pCoeff = new float[nExp];
 
     int i = 0;
     while (i < poly1.MaxExp() && i < poly2.MaxExp())
@@ -99,7 +99,7 @@ Polynome& operator-(const Polynome &poly1, const Polynome &poly2)
     int nExp = poly1.MaxExp() > poly2.MaxExp() ? poly1.MaxExp() : poly2.MaxExp();
     float *pCoeff1 = poly1.Coeff();
     float *pCoeff2 = poly2.Coeff();
-    float *pCoeff = new float(nExp);
+    float *pCoeff = new float[nExp];
 
     int i = 0;
     while (i < poly1.MaxExp() && i < poly2.MaxExp())

@@ -209,3 +209,46 @@ void Sort::BuildMaxHeap(int a[], int n)
     }
 }
 
+void Sort::QuickSort(int a[], int n)
+{
+    QuickSortSub(a, 0, n - 1);
+}
+
+void Sort::QuickSortSub(int a[], int nLow, int nHigh)
+{
+    if (nLow < nHigh)
+    {
+        int q = Partition(a, nLow, nHigh);
+        QuickSortSub(a, nLow, q - 1);
+        QuickSortSub(a, q + 1, nHigh);
+    }
+}
+
+int Sort::Partition(int a[], int nLow, int nHigh)
+{
+    int nBase = a[nLow];
+    int i = nLow, j = nHigh;
+    while (i < j)
+    {
+        while (i < j && a[j] >= nBase)
+        {
+            --j;
+        }
+        if (i < j)
+        {
+            a[i++] = a[j];
+        }
+
+        while (i < j && a[i] < nBase)
+        {
+            ++i;
+        }
+        if (i < j)
+        {
+            a[j--] = a[i];
+        }
+    }
+    a[i] = nBase;
+    return i;
+}
+

@@ -18,6 +18,7 @@ int main()
   //  SortTest::MergeSortTest();
   //  SortTest::MergeInsertSortTest();
   //  SortTest::BubbleSortTest();
-    SortTest::MergeSortTest();
+  //  SortTest::MergeSortTest();
+    SortTest::QuickSortTest();
     system("pause");
 }

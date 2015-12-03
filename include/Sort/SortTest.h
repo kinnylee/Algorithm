@@ -1,6 +1,9 @@
 //≈≈–Úµ•‘™≤‚ ‘
+#ifndef _SORTTEST_H_
+#define _SORTTEST_H_
+#include "Sort_Global.h"
 
-class SortTest
+class SORT_EXPORT SortTest
 {              
 public:
     SortTest();
@@ -13,7 +16,10 @@ public:
     void static MergeInsertSortTest();
     void static BubbleSortTest();
     void static HeapSortTest();
+    void static QuickSortTest();
 
 private:
     void static PrintOut();
 };
+
+#endif

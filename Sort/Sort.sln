@@ -15,6 +15,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataStruct", "DataStruct\Da
 		{15FDE077-FD47-4240-A598-54FC934D0089} = {15FDE077-FD47-4240-A598-54FC934D0089}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Main", "Main\Main.vcxproj", "{B30BA690-19CB-4B67-9D58-3DC70FDA43AF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{79693A77-C0AE-41BA-AD13-AA850BC42C4B} = {79693A77-C0AE-41BA-AD13-AA850BC42C4B}
+		{15FDE077-FD47-4240-A598-54FC934D0089} = {15FDE077-FD47-4240-A598-54FC934D0089}
+		{FA4378B4-6C91-4A96-9A67-671C5CDA24DE} = {FA4378B4-6C91-4A96-9A67-671C5CDA24DE}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -33,6 +40,10 @@ Global
 		{79693A77-C0AE-41BA-AD13-AA850BC42C4B}.Debug|Win32.Build.0 = Debug|Win32
 		{79693A77-C0AE-41BA-AD13-AA850BC42C4B}.Release|Win32.ActiveCfg = Release|Win32
 		{79693A77-C0AE-41BA-AD13-AA850BC42C4B}.Release|Win32.Build.0 = Release|Win32
+		{B30BA690-19CB-4B67-9D58-3DC70FDA43AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B30BA690-19CB-4B67-9D58-3DC70FDA43AF}.Debug|Win32.Build.0 = Debug|Win32
+		{B30BA690-19CB-4B67-9D58-3DC70FDA43AF}.Release|Win32.ActiveCfg = Release|Win32
+		{B30BA690-19CB-4B67-9D58-3DC70FDA43AF}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

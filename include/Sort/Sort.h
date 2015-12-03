@@ -27,6 +27,8 @@ public:
 
     void static HeapSort(int a[], int n);
 
+    void static QuickSort(int a[], int n);
+
 private:
     void static MergeSub(int a[], int nLow, int nHigh);
     void static Merge(int a[], int p, int q, int r);
@@ -35,5 +37,7 @@ private:
     void static InsertSub(int a[], int nLow, int nHigh);
     void static MaxHeapify(int a[], int n, int nIndex);
     void static BuildMaxHeap(int a[], int n);
+    void static QuickSortSub(int a[], int nLow, int nHigh);
+    int static Partition(int a[], int nLow, int nHihg);
     
 };
