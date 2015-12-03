@@ -105,7 +105,6 @@
     <ClCompile Include="..\..\src\Basic\Common.cpp" />
     <ClCompile Include="..\..\src\Basic\Find.cpp" />
     <ClCompile Include="..\..\src\Basic\Inversion.cpp" />
-    <ClCompile Include="..\..\src\Basic\main.cpp" />
     <ClCompile Include="..\..\src\Basic\Matrix.cpp" />
     <ClCompile Include="..\..\src\Basic\MaxSubArray.cpp" />
     <ClCompile Include="..\..\src\Basic\Polynome.cpp" />

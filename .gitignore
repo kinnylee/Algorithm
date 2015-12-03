@@ -11,3 +11,6 @@
 /lib/*.exp
 /lib/*.ilk
 /lib/*.pdb
+
+/bin
+

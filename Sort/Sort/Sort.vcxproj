@@ -93,7 +93,6 @@
     <ClInclude Include="..\..\include\Sort\Sort_Global.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Sort\main.cpp" />
     <ClCompile Include="..\..\src\Sort\Sort.cpp" />
     <ClCompile Include="..\..\src\Sort\SortTest.cpp" />
   </ItemGroup>

@@ -56,9 +56,6 @@
     <ClCompile Include="..\..\src\Basic\BinaryArray.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Basic\main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\Basic\Find.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
