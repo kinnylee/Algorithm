@@ -68,3 +68,15 @@ void SortTest::QuickSortTest()
     PrintOut();
 }
 
+void SortTest::RandQuickSortTest()
+{
+    Sort::RandQuickSort(s_array, s_nArraySize);
+    PrintOut();
+}
+
+void SortTest::QuickInsertSortTest()
+{
+    Sort::QuickInsertSort(s_array, s_nArraySize);
+    PrintOut();
+}
+

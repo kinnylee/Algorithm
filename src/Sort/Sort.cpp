@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include "Common.h"
 
 #include "Sort.h"
@@ -5,7 +7,7 @@
 
 void Sort::InsertSort(int a[], int n)
 {
-    InsertSub(a, 0, n - 1);
+    InsertSortSub(a, 0, n - 1);
 }
 
 void Sort::RecursionInsertSort(int a[], int n)
@@ -122,8 +124,8 @@ void Sort::MergeInsertSortSub(int a[], int nLow, int nHigh, int k)
         if (nMid + 1 <= k)
         {
             //insert the sub array, size <= k
-            InsertSub(a, nLow, nLow + nMid);
-            InsertSub(a, nLow + nMid + 1, nHigh);
+            InsertSortSub(a, nLow, nLow + nMid);
+            InsertSortSub(a, nLow + nMid + 1, nHigh);
         }
         //else recursion
         else
@@ -137,7 +139,7 @@ void Sort::MergeInsertSortSub(int a[], int nLow, int nHigh, int k)
     }
 }
 
-void Sort::InsertSub(int a[], int nLow, int nHigh)
+void Sort::InsertSortSub(int a[], int nLow, int nHigh)
 {
     for (int j = nLow + 1; j <= nHigh; ++j)
     {
@@ -250,5 +252,49 @@ int Sort::Partition(int a[], int nLow, int nHigh)
     }
     a[i] = nBase;
     return i;
+}
+
+void Sort::RandQuickSort(int a[], int n)
+{
+    RandQuickSortSub(a, 0, n - 1);
+}
+
+void Sort::RandQuickSortSub(int a[], int nLow, int nHigh)
+{
+    if (nLow < nHigh)
+    {
+        int q = RandParition(a, nLow, nHigh);
+        RandQuickSortSub(a, nLow, q - 1);
+        RandQuickSortSub(a, q + 1, nHigh);
+    }
+}
+
+int Sort::RandParition(int a[], int nLow, int nHigh)
+{
+    int i = Common::RandInt(nLow, nHigh);
+    Common::Swap(a[i], a[nLow]);
+    return Partition(a, nLow, nHigh);
+}
+
+void Sort::QuickInsertSort(int a[], int n)
+{
+    QuickInsertSortSub(a, 0, n - 1, 3);
+    InsertSort(a, n);
+}
+
+void Sort::QuickInsertSortSub(int a[], int nLow, int nHigh, int k)
+{
+    if (nLow < nHigh)
+    {
+        int q = RandParition(a, nLow, nHigh);
+        if (q - nLow >= k)
+        {
+            QuickInsertSortSub(a, nLow, q - 1, k);
+        }
+        if (nHigh - q >= k)
+        {
+            QuickInsertSortSub(a, q + 1, nHigh, k);
+        }
+    }
 }
 

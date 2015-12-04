@@ -17,6 +17,8 @@ public:
     void static BubbleSortTest();
     void static HeapSortTest();
     void static QuickSortTest();
+    void static RandQuickSortTest();
+    void static QuickInsertSortTest();
 
 private:
     void static PrintOut();
