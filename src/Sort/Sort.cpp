@@ -228,7 +228,12 @@ void Sort::QuickSortSub(int a[], int nLow, int nHigh)
 
 int Sort::Partition(int a[], int nLow, int nHigh)
 {
-    int nBase = a[nLow];
+    return PartitionSub(a, nLow, nHigh, a[nLow]);
+}
+
+
+int Sort::PartitionSub(int a[], int nLow, int nHigh, int nBase)
+{
     int i = nLow, j = nHigh;
     while (i < j)
     {
@@ -253,6 +258,7 @@ int Sort::Partition(int a[], int nLow, int nHigh)
     a[i] = nBase;
     return i;
 }
+
 
 void Sort::RandQuickSort(int a[], int n)
 {
@@ -295,6 +301,50 @@ void Sort::QuickInsertSortSub(int a[], int nLow, int nHigh, int k)
         {
             QuickInsertSortSub(a, q + 1, nHigh, k);
         }
+    }
+}
+
+int Sort::MedianParition(int a[], int nLow, int nHigh)
+{
+    int nBase = 0;
+    int p, q, r;
+    p = q = r = 0;
+    if (nHigh - nLow <= 2)
+    {
+        nBase = nLow;
+    }
+    else
+    {
+
+        p = Common::RandInt(nLow, nHigh);
+
+        do
+        {
+            q = Common::RandInt(nLow, nHigh);
+        } while (q == p);
+
+        do
+        {
+            r = Common::RandInt(nLow, nHigh);
+        } while (r == p || r == q);
+    }
+
+    int nMedian = Common::Median(a[p], a[q], a[r]);
+    return PartitionSub(a, nLow, nHigh, nMedian);
+}
+
+void Sort::QuickMedianSort(int a[], int n)
+{
+    QuickMedianSortSub(a, 0, n - 1);
+}
+
+void Sort::QuickMedianSortSub(int a[], int nLow, int nHigh)
+{
+    if (nLow < nHigh)
+    {
+        int q = MedianParition(a, nLow, nHigh);
+        QuickMedianSortSub(a, nLow, q - 1);
+        QuickMedianSortSub(a, q + 1, nHigh);
     }
 }
 

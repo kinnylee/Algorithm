@@ -11,7 +11,48 @@ void Common::Swap(int &a, int &b)
 
 int Common::RandInt(int nMin, int nMax)
 {
-    srand(time_t(NULL));
-    return rand() % (nMax - nMin) + nMin;
+    return rand() % (nMax - nMin + 1) + nMin;
+}
+
+int Common::Median(int a, int b, int c)
+{
+    int nResult = 0;
+    if (a > b)
+    {
+        if (b > c)
+        {
+            nResult = b;
+        }
+        else 
+        {
+            if (a > c)
+            {
+                nResult = c;
+            }
+            else
+            {
+                nResult = a;
+            }
+        }
+    }
+    else
+    {
+        if (a > c)
+        {
+            nResult = a;
+        }
+        else
+        {
+            if (b > c)
+            {
+                nResult = c;
+            }
+            else
+            {
+                nResult = b;
+            }
+        }
+    }
+    return nResult;
 }
 

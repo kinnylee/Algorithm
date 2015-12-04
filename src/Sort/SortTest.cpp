@@ -80,3 +80,9 @@ void SortTest::QuickInsertSortTest()
     PrintOut();
 }
 
+void SortTest::QuicMedianSortTest()
+{
+    Sort::QuickMedianSort(s_array, s_nArraySize);
+    PrintOut();
+}
+

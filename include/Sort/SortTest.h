@@ -19,6 +19,7 @@ public:
     void static QuickSortTest();
     void static RandQuickSortTest();
     void static QuickInsertSortTest();
+    void static QuicMedianSortTest();
 
 private:
     void static PrintOut();
