@@ -54,6 +54,11 @@ public:
     */
     void static CountSort(int a[], int n, int k);
 
+    /**
+      brief: d is digit
+    */
+    void static RadixSort(int a[], int n, int d);
+
 private:
     void static MergeSub(int a[], int nLow, int nHigh);
     void static Merge(int a[], int p, int q, int r);

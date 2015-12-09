@@ -1,6 +1,7 @@
 #include <process.h>
 
 #include "SortTest.h"
+#include "Common.h"
 
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
 unsigned b[10] = { 1, 0, 0, 1, 1, 0, 0, 1, 1, 1 };
@@ -10,11 +11,13 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    SortTest::CountSortTest();
+    int *digit = new int[5];
+    Common::Digit(12345, digit);
     system("pause");
     return 1;
 }
 
+    //SortTest::CountSortTest();
     //SortTest::TailRecursiveQuickSortTest();
    //TODO //SortTest::QuicMedianSortTest();
 //    SortTest::QuickInsertSortTest();

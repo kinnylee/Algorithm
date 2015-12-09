@@ -403,3 +403,18 @@ void Sort::CountSortSub(int a[], int n, int b[], int c[], int k)
     }
 }
 
+void Sort::RadixSort(int a[], int n, int d)
+{
+    int *b = new int[n];
+    int *c = new int[d];
+
+    //sort from low to high
+    for (int k = d - 1; k >=0; --k)
+    {
+        for (int i = 0; i < n; ++i)
+        {
+            b[i] = Common::Digit(a[i], k);
+        }
+    }
+}
+
