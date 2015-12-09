@@ -86,3 +86,9 @@ void SortTest::QuicMedianSortTest()
     PrintOut();
 }
 
+void SortTest::TailRecursiveQuickSortTest()
+{
+    Sort::TailRecursiveQuickSort(s_array, s_nArraySize);
+    PrintOut();
+}
+

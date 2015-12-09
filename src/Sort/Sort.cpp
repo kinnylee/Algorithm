@@ -348,3 +348,18 @@ void Sort::QuickMedianSortSub(int a[], int nLow, int nHigh)
     }
 }
 
+void Sort::TailRecursiveQuickSort(int a[], int n)
+{
+    TailRecursiveQuickSortSub(a, 0, n - 1);
+}
+
+void Sort::TailRecursiveQuickSortSub(int a[], int nLow, int nHigh)
+{
+    while (nLow < nHigh)
+    {
+        int nMid = Partition(a, nLow, nHigh);
+        TailRecursiveQuickSortSub(a, nLow, nMid - 1);
+        nLow = nMid + 1;
+    }
+}
+

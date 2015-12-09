@@ -45,6 +45,8 @@ public:
     */
     void static QuickMedianSort(int a[], int n);
 
+    void static TailRecursiveQuickSort(int a[], int n);
+
 private:
     void static MergeSub(int a[], int nLow, int nHigh);
     void static Merge(int a[], int p, int q, int r);
@@ -61,5 +63,6 @@ private:
     void static QuickInsertSortSub(int a[], int nLow, int nHigh, int k);
     void static QuickMedianSortSub(int a[], int nLow, int nHigh);
     int static MedianParition(int a[], int nLow, int nHigh);
+    void static TailRecursiveQuickSortSub(int a[], int nLow, int nHigh);
     
 };
