@@ -92,3 +92,9 @@ void SortTest::TailRecursiveQuickSortTest()
     PrintOut();
 }
 
+void SortTest::CountSortTest()
+{
+    Sort::CountSort(s_array, s_nArraySize, s_nArraySize);
+    PrintOut();
+}
+

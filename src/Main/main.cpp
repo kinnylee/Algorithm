@@ -10,11 +10,12 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    SortTest::TailRecursiveQuickSortTest();
+    SortTest::CountSortTest();
     system("pause");
     return 1;
 }
 
+    //SortTest::TailRecursiveQuickSortTest();
    //TODO //SortTest::QuicMedianSortTest();
 //    SortTest::QuickInsertSortTest();
 //    SortTest::RandQuickSortTest();

@@ -21,6 +21,7 @@ public:
     void static QuickInsertSortTest();
     void static QuicMedianSortTest();
     void static TailRecursiveQuickSortTest();
+    void static CountSortTest();
 
 private:
     void static PrintOut();

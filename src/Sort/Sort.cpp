@@ -363,3 +363,43 @@ void Sort::TailRecursiveQuickSortSub(int a[], int nLow, int nHigh)
     }
 }
 
+void Sort::CountSort(int a[], int n, int k)
+{
+    int *b = new int[n];
+    int *c = new int[k];
+    CountSortSub(a, n, b, c, k);
+    for (int i = 0; i < n; ++i)
+    {
+        a[i] = b[i];
+    }
+
+}
+
+void Sort::CountSortSub(int a[], int n, int b[], int c[], int k)
+{
+    for (int i = 0; i < n; ++i)
+    {
+        b[i] = 0;
+    }
+    for (int i = 0; i < k; ++i)
+    {
+        c[i] = 0;
+    }
+
+    for (int i = 0; i < k; ++i)
+    {
+        ++c[a[i]];
+    }
+
+    for (int i = 1; i < k; ++i)
+    {
+        c[i] += c[i - 1];
+    }
+
+    for (int i = n - 1; i >= 0; --i)
+    {
+        b[c[a[i]]-1] = a[i];
+        --c[a[i]];
+    }
+}
+

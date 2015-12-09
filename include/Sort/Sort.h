@@ -47,6 +47,13 @@ public:
 
     void static TailRecursiveQuickSort(int a[], int n);
 
+    /**
+      brief: array b and array c used to help, find the number of large and samll,
+      it is the right position.
+      k is the max of the array, when k = O(n), count sort is a better function.
+    */
+    void static CountSort(int a[], int n, int k);
+
 private:
     void static MergeSub(int a[], int nLow, int nHigh);
     void static Merge(int a[], int p, int q, int r);
@@ -64,5 +71,6 @@ private:
     void static QuickMedianSortSub(int a[], int nLow, int nHigh);
     int static MedianParition(int a[], int nLow, int nHigh);
     void static TailRecursiveQuickSortSub(int a[], int nLow, int nHigh);
+    void static CountSortSub(int a[], int n, int b[], int c[], int k);
     
 };
