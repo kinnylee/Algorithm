@@ -12,7 +12,7 @@ Stack::~Stack()
 
 void Stack::Push(int x)
 {
-    if (m_nTop == m_nSize- 1)
+    if (OverFlow())
     {
         return;
     }
@@ -30,11 +30,25 @@ int Stack::Pop()
 
 bool Stack::Empty()
 {
-    if (m_nTop == 0)
+    if (m_nTop == -1)
     {
         return true;
     }
     return false;
+}
+
+bool Stack::OverFlow()
+{
+    if (m_nTop == m_nSize - 1)
+    {
+        return true;
+    }
+    return false;
+}
+
+int Stack::Size()
+{
+    return m_nTop + 1;
 }
 
 DoubleStack::DoubleStack(int nSize) 
@@ -93,4 +107,11 @@ bool DoubleStack::Empty()
         return true;
     }
     return false;
+}
+
+int DoubleStack::Size()
+{
+    int nLeft = m_nSize - m_nLeftTop + 1;
+    int nRight = m_nSize - m_nRightTop;
+    return nLeft + nRight;
 }

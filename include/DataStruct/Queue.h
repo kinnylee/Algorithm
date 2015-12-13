@@ -2,6 +2,7 @@
 #define _QUEUE_H_
 
 #include "DataStruct_Global.h"
+#include "Stack.h"
 
 class DATASTRUCT_EXPORT Queue
 {
@@ -16,6 +17,7 @@ public:
     int DeQueue();
     bool Empty();
     bool OverFlow();
+    int Size();
 
 private:
     int m_nSize;
@@ -36,6 +38,7 @@ public:
     void EnQueueTail(int x);
     int DeQueueHead();
     int DeQueueTail();
+    int Size();
 
 private:
     int m_nSize;
@@ -43,4 +46,23 @@ private:
     int m_nHead;
     int m_nTail;
 };
+
+class DATASTRUCT_EXPORT QueueDoubleStack
+{
+public:
+    QueueDoubleStack(int nSize);
+    ~QueueDoubleStack();
+
+    bool Empty();
+    bool OverFlow();
+    void EnQueue(int x);
+    int DeQueue();
+    int Size();
+
+private:
+    Stack *m_lStack;
+    Stack *m_RStack;
+    int m_nSize;
+};
+
 #endif

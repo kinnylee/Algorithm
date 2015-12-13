@@ -12,6 +12,8 @@ public:
     void Push(int x);
     int Pop();
     bool Empty();
+    bool OverFlow();
+    int Size();
 
 private:
     int m_nSize;
@@ -31,6 +33,7 @@ public:
     void PushRight(int x);
     int PopRight();
     bool Empty();
+    int Size();
 
 private:
     int m_nSize;
