@@ -18,12 +18,24 @@
     <ClCompile Include="..\..\src\DataStruct\PriorityQueueHeap.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\DataStruct\Queue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DataStruct\Stack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\DataStruct\PriorityQueueHeap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\DataStruct\Stack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\DataStruct\Queue.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
