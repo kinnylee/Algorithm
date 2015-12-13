@@ -14,25 +14,34 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    Queue queue(3);
-    queue.EnQueue(1);
-    queue.EnQueue(2);
-    queue.EnQueue(3);
-    queue.EnQueue(4);
-    std::cout << queue.DeQueue() << std::endl;
-    std::cout << queue.DeQueue() << std::endl;
-    std::cout << queue.DeQueue() << std::endl;
-    std::cout << queue.DeQueue() << std::endl;
 
     system("pause");
     return 1;
 }
-
-   /* Stack stack(5);
+    /*Stack stack(3);
     stack.Push(1);
     stack.Push(2);
+    stack.Push(3);
+    stack.Push(4);
     std::cout << stack.Pop() << std::endl;
     std::cout << stack.Pop() << std::endl;*/
+
+    /*DoubleStack dStack(5);
+    dStack.PushLeft(1);
+    dStack.PushLeft(2);
+    dStack.PushLeft(3);
+    dStack.PushLeft(6);
+    dStack.PushRight(4);
+    dStack.PushRight(5);
+    std::cout << dStack.PopLeft() << std::endl;
+    std::cout << dStack.PopLeft() << std::endl;
+    std::cout << dStack.PopLeft() << std::endl;
+    std::cout << dStack.PopRight() << std::endl;
+    std::cout << dStack.PopRight() << std::endl;*/
+
+   
+
+   
 
     //int *digit = new int[5];
     //Common::Digit(12345, digit);
