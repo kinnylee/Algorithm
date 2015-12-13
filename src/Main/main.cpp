@@ -7,6 +7,7 @@
 #include "Queue.h"
 #include "StackDoubleQueue.h"
 #include "QueueDoubleStack.h"
+#include "LinkList.h"
 
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
 unsigned b[10] = { 1, 0, 0, 1, 1, 0, 0, 1, 1, 1 };
@@ -16,6 +17,12 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
+    LinkList *pHead = new LinkList;
+    pHead->FrontInsert(1);
+    pHead->FrontInsert(2);
+    pHead->FrontInsert(3);
+    pHead->Delete(2);
+    pHead->PrintOut();
     system("pause");
     return 1;
 }
