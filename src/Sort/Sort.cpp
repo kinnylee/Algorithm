@@ -220,45 +220,11 @@ void Sort::QuickSortSub(int a[], int nLow, int nHigh)
 {
     if (nLow < nHigh)
     {
-        int q = Partition(a, nLow, nHigh);
+        int q = Common::Partition(a, nLow, nHigh);
         QuickSortSub(a, nLow, q - 1);
         QuickSortSub(a, q + 1, nHigh);
     }
 }
-
-int Sort::Partition(int a[], int nLow, int nHigh)
-{
-    return PartitionSub(a, nLow, nHigh, a[nLow]);
-}
-
-
-int Sort::PartitionSub(int a[], int nLow, int nHigh, int nBase)
-{
-    int i = nLow, j = nHigh;
-    while (i < j)
-    {
-        while (i < j && a[j] >= nBase)
-        {
-            --j;
-        }
-        if (i < j)
-        {
-            a[i++] = a[j];
-        }
-
-        while (i < j && a[i] < nBase)
-        {
-            ++i;
-        }
-        if (i < j)
-        {
-            a[j--] = a[i];
-        }
-    }
-    a[i] = nBase;
-    return i;
-}
-
 
 void Sort::RandQuickSort(int a[], int n)
 {
@@ -269,18 +235,12 @@ void Sort::RandQuickSortSub(int a[], int nLow, int nHigh)
 {
     if (nLow < nHigh)
     {
-        int q = RandParition(a, nLow, nHigh);
+        int q = Common::RandParition(a, nLow, nHigh);
         RandQuickSortSub(a, nLow, q - 1);
         RandQuickSortSub(a, q + 1, nHigh);
     }
 }
 
-int Sort::RandParition(int a[], int nLow, int nHigh)
-{
-    int i = Common::RandInt(nLow, nHigh);
-    Common::Swap(a[i], a[nLow]);
-    return Partition(a, nLow, nHigh);
-}
 
 void Sort::QuickInsertSort(int a[], int n)
 {
@@ -292,7 +252,7 @@ void Sort::QuickInsertSortSub(int a[], int nLow, int nHigh, int k)
 {
     if (nLow < nHigh)
     {
-        int q = RandParition(a, nLow, nHigh);
+        int q = Common::RandParition(a, nLow, nHigh);
         if (q - nLow >= k)
         {
             QuickInsertSortSub(a, nLow, q - 1, k);
@@ -330,7 +290,7 @@ int Sort::MedianParition(int a[], int nLow, int nHigh)
     }
 
     int nMedian = Common::Median(a[p], a[q], a[r]);
-    return PartitionSub(a, nLow, nHigh, nMedian);
+    return Common::PartitionSub(a, nLow, nHigh, nMedian);
 }
 
 void Sort::QuickMedianSort(int a[], int n)
@@ -357,7 +317,7 @@ void Sort::TailRecursiveQuickSortSub(int a[], int nLow, int nHigh)
 {
     while (nLow < nHigh)
     {
-        int nMid = Partition(a, nLow, nHigh);
+        int nMid = Common::Partition(a, nLow, nHigh);
         TailRecursiveQuickSortSub(a, nLow, nMid - 1);
         nLow = nMid + 1;
     }
@@ -416,5 +376,10 @@ void Sort::RadixSort(int a[], int n, int d)
             b[i] = Common::Digit(a[i], k);
         }
     }
+}
+
+void Sort::BucketSort(int a[], int n)
+{
+    int *B = new int[n];
 }
 

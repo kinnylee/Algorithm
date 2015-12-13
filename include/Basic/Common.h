@@ -12,6 +12,11 @@ public:
     int static DecadePower(int n);
     int static Digit(int a, int *digit);
     int static Digit(int a, int nPos);
+
+    int static Partition(int a[], int nLow, int nHihg);
+    int static RandParition(int a[], int nLow, int nHigh);
+    int static PartitionSub(int a[], int nLow, int nHigh, int nBase);
+
 };
 
 #endif

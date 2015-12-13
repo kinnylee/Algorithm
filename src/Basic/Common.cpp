@@ -98,3 +98,42 @@ int Common::DecadePower(int n)
     return nSum;
 }
 
+int Common::RandParition(int a[], int nLow, int nHigh)
+{
+    int i = Common::RandInt(nLow, nHigh);
+    Common::Swap(a[i], a[nLow]);
+    return Partition(a, nLow, nHigh);
+}
+
+int Common::Partition(int a[], int nLow, int nHigh)
+{
+    return PartitionSub(a, nLow, nHigh, a[nLow]);
+}
+
+int Common::PartitionSub(int a[], int nLow, int nHigh, int nBase)
+{
+    int i = nLow, j = nHigh;
+    while (i < j)
+    {
+        while (i < j && a[j] >= nBase)
+        {
+            --j;
+        }
+        if (i < j)
+        {
+            a[i++] = a[j];
+        }
+
+        while (i < j && a[i] < nBase)
+        {
+            ++i;
+        }
+        if (i < j)
+        {
+            a[j--] = a[i];
+        }
+    }
+    a[i] = nBase;
+    return i;
+}
+

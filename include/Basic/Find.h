@@ -15,6 +15,9 @@ public:
     //find if exists two numbers, and the sum of the two numbers is the given number
     // need the time complexity is n*lgn
     bool static FindTwoNumber(int a[], int n, int sum);
+
+    //find the the number of pos
+    int static RandomizedSelect(int a[], int p, int r, int pos);
 };
 
 #endif

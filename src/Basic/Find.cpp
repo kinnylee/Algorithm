@@ -1,4 +1,5 @@
 #include "Find.h"
+#include "Common.h"
 
 int Find::RecusionBinarySearch(int a[], int low, int high, int key)
 {
@@ -82,5 +83,30 @@ bool Find::FindTwoNumber(int a[], int n, int sum)
         }
     }
     return bResult;
+}
+
+int Find::RandomizedSelect(int a[], int p, int r, int pos)
+{
+    //if p == r, the pos = 1
+    if (p == r)
+    {
+        return a[p];
+    }
+
+    int q = Common::RandParition(a, p, r);
+    //min array size
+    int k = q - p + 1;
+    if (pos == k)
+    {
+        return a[q];
+    }
+    else if (pos < k)
+    {
+        RandomizedSelect(a, p, q - 1, pos);
+    }
+    else
+    {
+        RandomizedSelect(a, q + 1, r, pos - k);
+    }
 }
 

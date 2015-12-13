@@ -59,6 +59,8 @@ public:
     */
     void static RadixSort(int a[], int n, int d);
 
+    void static BucketSort(int a[], int n);
+
 private:
     void static MergeSub(int a[], int nLow, int nHigh);
     void static Merge(int a[], int p, int q, int r);
@@ -68,10 +70,7 @@ private:
     void static MaxHeapify(int a[], int n, int nIndex);
     void static BuildMaxHeap(int a[], int n);
     void static QuickSortSub(int a[], int nLow, int nHigh);
-    int static Partition(int a[], int nLow, int nHihg);
-    int static PartitionSub(int a[], int nLow, int nHigh, int nBase);
     void static RandQuickSortSub(int a[], int nLow, int nHigh);
-    int static RandParition(int a[], int nLow, int nHigh);
     void static QuickInsertSortSub(int a[], int nLow, int nHigh, int k);
     void static QuickMedianSortSub(int a[], int nLow, int nHigh);
     int static MedianParition(int a[], int nLow, int nHigh);
