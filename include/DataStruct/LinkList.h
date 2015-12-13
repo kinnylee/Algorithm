@@ -14,6 +14,9 @@ public:
     void TailInsert(int key);
     LinkList* Search(int key);
     void Delete(int key);
+    void DeleteNodeMove(LinkList *pNode);
+    void DeleteNodeTraval(LinkList *pNode);
+    void DeleteTail();
     void Clear();
     void PrintOut();
 

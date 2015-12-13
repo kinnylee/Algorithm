@@ -21,7 +21,9 @@ int main()
     pHead->FrontInsert(1);
     pHead->FrontInsert(2);
     pHead->FrontInsert(3);
-    pHead->Delete(2);
+    LinkList *pNode = pHead->Search(2);
+    pHead->DeleteNodeTraval(pNode);
+//    pHead->DeleteTail();//
     pHead->PrintOut();
     system("pause");
     return 1;

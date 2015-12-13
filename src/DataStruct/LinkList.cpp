@@ -110,3 +110,59 @@ void LinkList::InitHead()
     m_pHead->m_pNext = nullptr;
 }
 
+void LinkList::DeleteNodeMove(LinkList *pNode)
+{
+    if (nullptr == pNode)
+    {
+        return;
+    }
+
+    if (nullptr != pNode->m_pNext)
+    {
+        LinkList *pNext = pNode->m_pNext;
+        pNode->m_nData = pNext->m_nData;
+        pNode->m_pNext = pNext->m_pNext;
+        delete pNext;
+        pNext = nullptr;
+    }
+    else
+    {
+        DeleteTail();
+    }
+}
+
+void LinkList::DeleteNodeTraval(LinkList *pNode)
+{
+    LinkList *pPre = m_pHead;
+    LinkList *pCurr = m_pHead->m_pNext;
+
+    while (pCurr->m_pNext != nullptr && pCurr != pNode)
+    {
+        pPre = pCurr;
+        pCurr = pCurr->m_pNext;
+    }
+
+    if (pCurr != nullptr)
+    {
+        pPre->m_pNext = pCurr->m_pNext;
+        delete pCurr;
+        pCurr = nullptr;
+    }
+}
+
+void LinkList::DeleteTail()
+{
+    LinkList *pPre = m_pHead;
+    LinkList *pCurr = m_pHead->m_pNext;
+
+    while (pCurr->m_pNext != nullptr)
+    {
+        pPre = pCurr;
+        pCurr = pCurr->m_pNext;
+    }
+
+    pPre->m_pNext = nullptr;
+    delete pCurr;
+    pCurr = nullptr;
+}
+
