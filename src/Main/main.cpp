@@ -14,7 +14,12 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-
+    DoubleQueue dQueue(5);
+    dQueue.EnQueueHead(1);
+    dQueue.EnQueueHead(2);
+    std::cout << dQueue.DeQueueHead() << std::endl;
+    std::cout << dQueue.DeQueueTail() << std::endl;
+    dQueue.EnQueueTail(3);
     system("pause");
     return 1;
 }
