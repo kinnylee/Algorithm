@@ -2,6 +2,7 @@
 #define _STATCK_H_
 
 #include "DataStruct_Global.h"
+#include "Queue.h"
 
 class DATASTRUCT_EXPORT Stack
 {
@@ -41,5 +42,7 @@ private:
     int m_nRightTop;
     int *m_pBuff;
 };
+
+
 
 #endif

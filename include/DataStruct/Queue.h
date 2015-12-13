@@ -47,22 +47,5 @@ private:
     int m_nTail;
 };
 
-class DATASTRUCT_EXPORT QueueDoubleStack
-{
-public:
-    QueueDoubleStack(int nSize);
-    ~QueueDoubleStack();
-
-    bool Empty();
-    bool OverFlow();
-    void EnQueue(int x);
-    int DeQueue();
-    int Size();
-
-private:
-    Stack *m_lStack;
-    Stack *m_RStack;
-    int m_nSize;
-};
 
 #endif

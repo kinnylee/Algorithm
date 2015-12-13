@@ -5,6 +5,8 @@
 #include "Common.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "StackDoubleQueue.h"
+#include "QueueDoubleStack.h"
 
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
 unsigned b[10] = { 1, 0, 0, 1, 1, 0, 0, 1, 1, 1 };
@@ -14,16 +16,25 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    QueueDoubleStack queue(5);
+    system("pause");
+    return 1;
+}
+    /*StackDoubleQueue stack(5);
+    stack.Push(1);
+    stack.Push(2);
+    stack.Push(3);
+    std::cout << stack.Pop() << std::endl;
+    std::cout << stack.Pop() << std::endl;
+    std::cout << stack.Pop() << std::endl;*/
+
+    /*QueueDoubleStack queue(5);
     queue.EnQueue(1);
     queue.EnQueue(2);
     queue.EnQueue(3);
     std::cout << queue.DeQueue() << std::endl;
     std::cout << queue.DeQueue() << std::endl;
-    std::cout << queue.DeQueue() << std::endl;
-    system("pause");
-    return 1;
-}
+    std::cout << queue.DeQueue() << std::endl;*/
+
     /*DoubleQueue dQueue(5);
     dQueue.EnQueueHead(1);
     dQueue.EnQueueHead(2);

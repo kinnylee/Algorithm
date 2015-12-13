@@ -90,13 +90,17 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\DataStruct\PriorityQueueHeap.cpp" />
     <ClCompile Include="..\..\src\DataStruct\Queue.cpp" />
+    <ClCompile Include="..\..\src\DataStruct\QueueDoubleStack.cpp" />
     <ClCompile Include="..\..\src\DataStruct\Stack.cpp" />
+    <ClCompile Include="..\..\src\DataStruct\StackDoubleQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h" />
     <ClInclude Include="..\..\include\DataStruct\PriorityQueueHeap.h" />
     <ClInclude Include="..\..\include\DataStruct\Queue.h" />
+    <ClInclude Include="..\..\include\DataStruct\QueueDoubleStack.h" />
     <ClInclude Include="..\..\include\DataStruct\Stack.h" />
+    <ClInclude Include="..\..\include\DataStruct\StackDoubleQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
