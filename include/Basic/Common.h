@@ -16,7 +16,6 @@ public:
     int static Partition(int a[], int nLow, int nHihg);
     int static RandParition(int a[], int nLow, int nHigh);
     int static PartitionSub(int a[], int nLow, int nHigh, int nBase);
-
 };
 
 #endif

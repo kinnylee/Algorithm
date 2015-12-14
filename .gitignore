@@ -8,6 +8,7 @@
 /Sort/COM/Debug
 /Sort/ThirdPartDemo/Debug
 /temp
+/Sort/ipch
 
 /lib/*.exe
 /lib/*.exp

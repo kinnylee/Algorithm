@@ -4,7 +4,7 @@
 #include <rapidjson/writer.h>
 
 using namespace RAPIDJSON_NAMESPACE;
-
+/*
 int main()
 {
     Document document;
@@ -30,4 +30,4 @@ int main()
     std::cout << buff.GetString() << std::endl;
     system("pause");
     return 1;
-}
+}*/

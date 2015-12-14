@@ -11,6 +11,7 @@
 #include "LinkList.h"
 
 #include "ProcessOuterCOMService_i.h"
+#include <vector>
 
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
 unsigned b[10] = { 1, 0, 0, 1, 1, 0, 0, 1, 1, 1 };
@@ -22,14 +23,15 @@ int main()
 {
     CoInitialize(NULL);
     CLSID clsID;
-    HRESULT hr = CLSIDFromProgID(OLESTR("ProcessOuterCOMService"), &clsID);
+    HRESULT hr;
+    hr = CLSIDFromProgID(OLESTR("ProcessOuterCOMService"), &clsID);
     IOuterCOMExport *pOuterExport = nullptr;
-    hr = CoCreateInstance(clsID, NULL, CLSCTX_INPROC, _uuidof(IOuterCOMExport),
+    hr = CoCreateInstance(/*IID_IIOuterCOMExport*/clsID, NULL, CLSCTX_INPROC, _uuidof(IOuterCOMExport),
         (void**)&pOuterExport);
-    pOuterExport->SetName(SysAllocString(_T("Lee")));
+   /* pOuterExport->SetName(SysAllocString(_T("Lee")));
     BSTR name;
     pOuterExport->GetName(&name);
-    std::cout << _bstr_t(name) << std::endl;
+    std::cout << _bstr_t(name) << std::endl;*/
     CoUninitialize();
     system("pause");
     return 1;
