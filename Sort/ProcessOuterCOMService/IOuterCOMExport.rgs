@@ -1,0 +1,26 @@
+HKCR
+{
+	OuterCOMService.1 = s 'IOuterCOMExport Class'
+	{
+		CLSID = s '{1B7351AC-671A-4131-957C-42DC82FCA70E}'
+	}
+	OuterCOMService = s 'IOuterCOMExport Class'
+	{		
+		CurVer = s 'OuterCOMService.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1B7351AC-671A-4131-957C-42DC82FCA70E} = s 'IOuterCOMExport Class'
+		{
+			ProgID = s 'OuterCOMService.1'
+			VersionIndependentProgID = s 'OuterCOMService'
+			ForceRemove Programmable
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{0530217D-E732-4F2B-A0EF-4E4952299DCE}'
+			Version = s '1.0'
+		}
+	}
+}

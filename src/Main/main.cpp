@@ -1,5 +1,6 @@
 #include <process.h>
 #include <iostream>
+#include <objbase.h>
 
 #include "SortTest.h"
 #include "Common.h"
@@ -9,6 +10,8 @@
 #include "QueueDoubleStack.h"
 #include "LinkList.h"
 
+#include "ProcessOuterCOMService_i.h"
+
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
 unsigned b[10] = { 1, 0, 0, 1, 1, 0, 0, 1, 1, 1 };
 
@@ -17,17 +20,29 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    LinkList *pHead = new LinkList;
-    pHead->FrontInsert(1);
-    pHead->FrontInsert(2);
-    pHead->FrontInsert(3);
-    LinkList *pNode = pHead->Search(2);
-    pHead->DeleteNodeTraval(pNode);
-//    pHead->DeleteTail();//
-    pHead->PrintOut();
+    CoInitialize(NULL);
+    CLSID clsID;
+    HRESULT hr = CLSIDFromProgID(OLESTR("ProcessOuterCOMService"), &clsID);
+    IOuterCOMExport *pOuterExport = nullptr;
+    hr = CoCreateInstance(clsID, NULL, CLSCTX_INPROC, _uuidof(IOuterCOMExport),
+        (void**)&pOuterExport);
+    pOuterExport->SetName(SysAllocString(_T("Lee")));
+    BSTR name;
+    pOuterExport->GetName(&name);
+    std::cout << _bstr_t(name) << std::endl;
+    CoUninitialize();
     system("pause");
     return 1;
 }
+//    LinkList *pHead = new LinkList;
+//    pHead->FrontInsert(1);
+//    pHead->FrontInsert(2);
+//    pHead->FrontInsert(3);
+//    LinkList *pNode = pHead->Search(2);
+//    pHead->DeleteNodeTraval(pNode);
+////    pHead->DeleteTail();//
+//    pHead->PrintOut();
+
     /*StackDoubleQueue stack(5);
     stack.Push(1);
     stack.Push(2);

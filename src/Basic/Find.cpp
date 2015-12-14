@@ -102,11 +102,11 @@ int Find::RandomizedSelect(int a[], int p, int r, int pos)
     }
     else if (pos < k)
     {
-        RandomizedSelect(a, p, q - 1, pos);
+        return RandomizedSelect(a, p, q - 1, pos);
     }
     else
     {
-        RandomizedSelect(a, q + 1, r, pos - k);
+        return RandomizedSelect(a, q + 1, r, pos - k);
     }
 }
 
