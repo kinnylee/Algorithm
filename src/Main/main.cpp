@@ -10,6 +10,7 @@
 #include "QueueDoubleStack.h"
 #include "LinkList.h"
 #include "DoubleLinkList.h"
+#include "StackList.h"
 
 #include "ProcessOuterCOMService_i.h"
 #include <vector>
@@ -22,13 +23,6 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    DoubleLinkList *pDLink = new DoubleLinkList;
-    pDLink->IncraseInsert(1);
-    pDLink->IncraseInsert(3);
-    pDLink->IncraseInsert(2);
-    pDLink->PrintOut();
-    delete pDLink;
-    pDLink = nullptr;
 
     //CoInitialize(NULL);
     //CLSID clsID;
@@ -45,6 +39,26 @@ int main()
     system("pause");
     return 1;
 }
+
+    //StackList *pList = new StackList;
+    //pList->Push(1);
+    //pList->Push(3);
+    //pList->Push(2);
+    //std::cout << pList->Pop() << std::endl;
+    //std::cout << pList->Pop() << std::endl;
+    //std::cout << pList->Pop() << std::endl;
+    //pList->Push(4);
+    //std::cout << pList->Pop() << std::endl;
+    //delete pList;
+    //pList = nullptr;
+
+    //DoubleLinkList *pDLink = new DoubleLinkList;
+    //pDLink->IncraseInsert(1);
+    //pDLink->IncraseInsert(3);
+    //pDLink->IncraseInsert(2);
+    //pDLink->PrintOut();
+    //delete pDLink;
+    //pDLink = nullptr;
 
     //LinkList *pHead = new LinkList;
     //pHead->FrontInsert(1);

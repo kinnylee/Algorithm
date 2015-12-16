@@ -157,3 +157,28 @@ void LinkList::DeleteTail()
     pCurr = nullptr;
 }
 
+void LinkList::DeleteFront()
+{
+    LinkNode *pNode = m_pHead->m_pNext;
+    if (nullptr != pNode)
+    {
+        m_pHead->m_pNext = pNode->m_pNext;
+        delete pNode;
+        pNode = nullptr;
+    }
+}
+
+int LinkList::First()
+{
+    if (nullptr == m_pHead->m_pNext)
+    {
+        return -1;
+    }
+    return m_pHead->m_pNext->m_nData;
+}
+
+bool LinkList::Empty()
+{
+    return m_pHead->m_pNext == nullptr;
+}
+

@@ -95,6 +95,7 @@
     <ClCompile Include="..\..\src\DataStruct\QueueDoubleStack.cpp" />
     <ClCompile Include="..\..\src\DataStruct\Stack.cpp" />
     <ClCompile Include="..\..\src\DataStruct\StackDoubleQueue.cpp" />
+    <ClCompile Include="..\..\src\DataStruct\StackList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h" />
@@ -105,6 +106,7 @@
     <ClInclude Include="..\..\include\DataStruct\QueueDoubleStack.h" />
     <ClInclude Include="..\..\include\DataStruct\Stack.h" />
     <ClInclude Include="..\..\include\DataStruct\StackDoubleQueue.h" />
+    <ClInclude Include="..\..\include\DataStruct\StackList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
