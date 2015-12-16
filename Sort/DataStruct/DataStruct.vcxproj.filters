@@ -33,6 +33,9 @@
     <ClCompile Include="..\..\src\DataStruct\LinkList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\DataStruct\DoubleLinkList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h">
@@ -54,6 +57,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\DataStruct\LinkList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\DataStruct\DoubleLinkList.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

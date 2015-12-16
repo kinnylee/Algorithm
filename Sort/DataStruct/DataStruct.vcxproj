@@ -88,6 +88,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\DataStruct\DoubleLinkList.cpp" />
     <ClCompile Include="..\..\src\DataStruct\LinkList.cpp" />
     <ClCompile Include="..\..\src\DataStruct\PriorityQueueHeap.cpp" />
     <ClCompile Include="..\..\src\DataStruct\Queue.cpp" />
@@ -97,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h" />
+    <ClInclude Include="..\..\include\DataStruct\DoubleLinkList.h" />
     <ClInclude Include="..\..\include\DataStruct\LinkList.h" />
     <ClInclude Include="..\..\include\DataStruct\PriorityQueueHeap.h" />
     <ClInclude Include="..\..\include\DataStruct\Queue.h" />

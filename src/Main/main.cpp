@@ -9,6 +9,7 @@
 #include "StackDoubleQueue.h"
 #include "QueueDoubleStack.h"
 #include "LinkList.h"
+#include "DoubleLinkList.h"
 
 #include "ProcessOuterCOMService_i.h"
 #include <vector>
@@ -21,15 +22,13 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-        LinkList *pHead = new LinkList;
-        pHead->FrontInsert(1);
-        pHead->FrontInsert(2);
-        pHead->FrontInsert(3);
-        LinkNode *pNode = pHead->Search(2);
-        pHead->DeleteNodeTraval(pNode);
-        pHead->Clear();
-      //  pHead->DeleteTail();//
-        pHead->PrintOut();
+    DoubleLinkList *pDLink = new DoubleLinkList;
+    pDLink->IncraseInsert(1);
+    pDLink->IncraseInsert(3);
+    pDLink->IncraseInsert(2);
+    pDLink->PrintOut();
+    delete pDLink;
+    pDLink = nullptr;
 
     //CoInitialize(NULL);
     //CLSID clsID;
@@ -47,6 +46,17 @@ int main()
     return 1;
 }
 
+    //LinkList *pHead = new LinkList;
+    //pHead->FrontInsert(1);
+    //pHead->FrontInsert(2);
+    //pHead->FrontInsert(3);
+    //LinkNode *pNode = pHead->Search(2);
+    //pHead->DeleteNodeTraval(pNode);
+    //pHead->Clear();
+    ////  pHead->DeleteTail();//
+    //pHead->PrintOut();
+    //delete pHead;
+    //pHead = nullptr;
 
     /*StackDoubleQueue stack(5);
     stack.Push(1);
