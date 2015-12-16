@@ -3,23 +3,24 @@
 
 LinkList::LinkList()
 {
-    m_pHead = nullptr;
-    m_pNext = nullptr;
+    m_pHead = new LinkNode;
+    m_pHead->m_nData = -1;
+    m_pHead->m_pNext = nullptr;
 }
 
 LinkList::~LinkList()
 {
-    
+    Clear();
+    if (nullptr != m_pHead)
+    {
+        delete m_pHead;
+        m_pHead = nullptr;
+    }
 }
 
 void LinkList::FrontInsert(int key)
 {
-    if (nullptr == m_pHead)
-    {
-        InitHead();
-    }
-
-    LinkList *pNode = new LinkList;
+    LinkNode *pNode = new LinkNode;
     pNode->m_nData = key;
     if (nullptr == m_pHead)
     {
@@ -35,16 +36,11 @@ void LinkList::FrontInsert(int key)
 
 void LinkList::TailInsert(int key)
 {
-    if (nullptr == m_pHead)
-    {
-        InitHead();
-    }
-
-    LinkList *pNode = new LinkList;
+    LinkNode *pNode = new LinkNode;
     pNode->m_nData = key;
     pNode->m_pNext = nullptr;
 
-    LinkList *pTemp = m_pHead;
+    LinkNode *pTemp = m_pHead;
     while (nullptr != pTemp->m_pNext)
     {
         pTemp = pTemp->m_pNext;
@@ -52,9 +48,9 @@ void LinkList::TailInsert(int key)
     pTemp->m_pNext = pNode;
 }
 
-LinkList* LinkList::Search(int key)
+LinkNode* LinkList::Search(int key)
 {
-    LinkList *pTemp = m_pHead->m_pNext;
+    LinkNode *pTemp = m_pHead->m_pNext;
     while (nullptr != pTemp && pTemp->m_nData != key)
     {
         pTemp = pTemp->m_pNext;
@@ -64,8 +60,8 @@ LinkList* LinkList::Search(int key)
 
 void LinkList::Delete(int key)
 {
-    LinkList *pPre = m_pHead;
-    LinkList *pCurr = m_pHead->m_pNext;
+    LinkNode *pPre = m_pHead;
+    LinkNode *pCurr = m_pHead->m_pNext;
     while (nullptr != pCurr && key != pCurr->m_nData)
     {
         pPre = pCurr;
@@ -81,8 +77,8 @@ void LinkList::Delete(int key)
 
 void LinkList::Clear()
 {
-    LinkList *pNode = m_pHead->m_pNext;
-    LinkList *pTemp = nullptr;
+    LinkNode *pNode = m_pHead->m_pNext;
+    LinkNode *pTemp = nullptr;
     while (pNode != nullptr)
     {
         pTemp = pNode;
@@ -91,11 +87,12 @@ void LinkList::Clear()
         delete pTemp;
         pTemp = nullptr;
     }
+    m_pHead->m_pNext = nullptr;
 }
 
 void LinkList::PrintOut()
 {
-    LinkList *pNode = m_pHead->m_pNext;
+    LinkNode *pNode = m_pHead->m_pNext;
     while (pNode != nullptr)
     {
         std::cout << pNode->m_nData << " ";
@@ -104,13 +101,7 @@ void LinkList::PrintOut()
     std::cout << std::endl;
 }
 
-void LinkList::InitHead()
-{
-    m_pHead = new LinkList;
-    m_pHead->m_pNext = nullptr;
-}
-
-void LinkList::DeleteNodeMove(LinkList *pNode)
+void LinkList::DeleteNodeMove(LinkNode *pNode)
 {
     if (nullptr == pNode)
     {
@@ -119,7 +110,7 @@ void LinkList::DeleteNodeMove(LinkList *pNode)
 
     if (nullptr != pNode->m_pNext)
     {
-        LinkList *pNext = pNode->m_pNext;
+        LinkNode *pNext = pNode->m_pNext;
         pNode->m_nData = pNext->m_nData;
         pNode->m_pNext = pNext->m_pNext;
         delete pNext;
@@ -131,10 +122,10 @@ void LinkList::DeleteNodeMove(LinkList *pNode)
     }
 }
 
-void LinkList::DeleteNodeTraval(LinkList *pNode)
+void LinkList::DeleteNodeTraval(LinkNode *pNode)
 {
-    LinkList *pPre = m_pHead;
-    LinkList *pCurr = m_pHead->m_pNext;
+    LinkNode *pPre = m_pHead;
+    LinkNode *pCurr = m_pHead->m_pNext;
 
     while (pCurr->m_pNext != nullptr && pCurr != pNode)
     {
@@ -152,8 +143,8 @@ void LinkList::DeleteNodeTraval(LinkList *pNode)
 
 void LinkList::DeleteTail()
 {
-    LinkList *pPre = m_pHead;
-    LinkList *pCurr = m_pHead->m_pNext;
+    LinkNode *pPre = m_pHead;
+    LinkNode *pCurr = m_pHead->m_pNext;
 
     while (pCurr->m_pNext != nullptr)
     {

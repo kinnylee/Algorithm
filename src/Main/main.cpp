@@ -21,13 +21,23 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    CoInitialize(NULL);
-    CLSID clsID;
-    HRESULT hr;
-    hr = CLSIDFromProgID(OLESTR("ProcessOuterCOMService"), &clsID);
-    IOuterCOMExport *pOuterExport = nullptr;
-    hr = CoCreateInstance(/*IID_IIOuterCOMExport*/clsID, NULL, CLSCTX_INPROC, _uuidof(IOuterCOMExport),
-        (void**)&pOuterExport);
+        LinkList *pHead = new LinkList;
+        pHead->FrontInsert(1);
+        pHead->FrontInsert(2);
+        pHead->FrontInsert(3);
+        LinkNode *pNode = pHead->Search(2);
+        pHead->DeleteNodeTraval(pNode);
+        pHead->Clear();
+      //  pHead->DeleteTail();//
+        pHead->PrintOut();
+
+    //CoInitialize(NULL);
+    //CLSID clsID;
+    //HRESULT hr;
+    //hr = CLSIDFromProgID(OLESTR("ProcessOuterCOMService"), &clsID);
+    //IOuterCOMExport *pOuterExport = nullptr;
+    //hr = CoCreateInstance(/*IID_IIOuterCOMExport*/clsID, NULL, CLSCTX_INPROC, _uuidof(IOuterCOMExport),
+    //    (void**)&pOuterExport);
    /* pOuterExport->SetName(SysAllocString(_T("Lee")));
     BSTR name;
     pOuterExport->GetName(&name);
@@ -36,14 +46,7 @@ int main()
     system("pause");
     return 1;
 }
-//    LinkList *pHead = new LinkList;
-//    pHead->FrontInsert(1);
-//    pHead->FrontInsert(2);
-//    pHead->FrontInsert(3);
-//    LinkList *pNode = pHead->Search(2);
-//    pHead->DeleteNodeTraval(pNode);
-////    pHead->DeleteTail();//
-//    pHead->PrintOut();
+
 
     /*StackDoubleQueue stack(5);
     stack.Push(1);
