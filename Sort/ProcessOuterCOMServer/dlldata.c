@@ -19,12 +19,12 @@
 extern "C"   {
 #endif
 
-EXTERN_PROXY_FILE( ProcessOuterCOMService )
+EXTERN_PROXY_FILE( ProcessOuterCOMServer )
 
 
 PROXYFILE_LIST_START
 /* Start of list */
-  REFERENCE_PROXY_FILE( ProcessOuterCOMService ),
+  REFERENCE_PROXY_FILE( ProcessOuterCOMServer ),
 /* End of list */
 PROXYFILE_LIST_END
 

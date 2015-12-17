@@ -4,9 +4,9 @@
 
 
  /* File created by MIDL compiler version 8.00.0603 */
-/* at Mon Dec 14 23:29:35 2015
+/* at Thu Dec 17 10:03:12 2015
  */
-/* Compiler settings for ProcessOuterCOMService.idl:
+/* Compiler settings for ..\..\include\ProcessOuterCOMServer\ProcessOuterCOMServer.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0603 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
@@ -47,7 +47,7 @@
 #endif /* __RPCPROXY_H_VERSION__ */
 
 
-#include "ProcessOuterCOMService_i.h"
+#include "ProcessOuterCOMServer_i.h"
 
 #define TYPE_FORMAT_STRING_SIZE   57                                
 #define PROC_FORMAT_STRING_SIZE   73                                
@@ -55,39 +55,39 @@
 #define TRANSMIT_AS_TABLE_SIZE    0            
 #define WIRE_MARSHAL_TABLE_SIZE   1            
 
-typedef struct _ProcessOuterCOMService_MIDL_TYPE_FORMAT_STRING
+typedef struct _ProcessOuterCOMServer_MIDL_TYPE_FORMAT_STRING
     {
     short          Pad;
     unsigned char  Format[ TYPE_FORMAT_STRING_SIZE ];
-    } ProcessOuterCOMService_MIDL_TYPE_FORMAT_STRING;
+    } ProcessOuterCOMServer_MIDL_TYPE_FORMAT_STRING;
 
-typedef struct _ProcessOuterCOMService_MIDL_PROC_FORMAT_STRING
+typedef struct _ProcessOuterCOMServer_MIDL_PROC_FORMAT_STRING
     {
     short          Pad;
     unsigned char  Format[ PROC_FORMAT_STRING_SIZE ];
-    } ProcessOuterCOMService_MIDL_PROC_FORMAT_STRING;
+    } ProcessOuterCOMServer_MIDL_PROC_FORMAT_STRING;
 
-typedef struct _ProcessOuterCOMService_MIDL_EXPR_FORMAT_STRING
+typedef struct _ProcessOuterCOMServer_MIDL_EXPR_FORMAT_STRING
     {
     long          Pad;
     unsigned char  Format[ EXPR_FORMAT_STRING_SIZE ];
-    } ProcessOuterCOMService_MIDL_EXPR_FORMAT_STRING;
+    } ProcessOuterCOMServer_MIDL_EXPR_FORMAT_STRING;
 
 
 static const RPC_SYNTAX_IDENTIFIER  _RpcTransferSyntax = 
 {{0x8A885D04,0x1CEB,0x11C9,{0x9F,0xE8,0x08,0x00,0x2B,0x10,0x48,0x60}},{2,0}};
 
 
-extern const ProcessOuterCOMService_MIDL_TYPE_FORMAT_STRING ProcessOuterCOMService__MIDL_TypeFormatString;
-extern const ProcessOuterCOMService_MIDL_PROC_FORMAT_STRING ProcessOuterCOMService__MIDL_ProcFormatString;
-extern const ProcessOuterCOMService_MIDL_EXPR_FORMAT_STRING ProcessOuterCOMService__MIDL_ExprFormatString;
+extern const ProcessOuterCOMServer_MIDL_TYPE_FORMAT_STRING ProcessOuterCOMServer__MIDL_TypeFormatString;
+extern const ProcessOuterCOMServer_MIDL_PROC_FORMAT_STRING ProcessOuterCOMServer__MIDL_ProcFormatString;
+extern const ProcessOuterCOMServer_MIDL_EXPR_FORMAT_STRING ProcessOuterCOMServer__MIDL_ExprFormatString;
 
 
 extern const MIDL_STUB_DESC Object_StubDesc;
 
 
-extern const MIDL_SERVER_INFO IIOuterCOMExport_ServerInfo;
-extern const MIDL_STUBLESS_PROXY_INFO IIOuterCOMExport_ProxyInfo;
+extern const MIDL_SERVER_INFO IOuterCOMExport_ServerInfo;
+extern const MIDL_STUBLESS_PROXY_INFO IOuterCOMExport_ProxyInfo;
 
 
 extern const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TABLE_SIZE ];
@@ -104,7 +104,7 @@ extern const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TA
 #endif
 
 
-static const ProcessOuterCOMService_MIDL_PROC_FORMAT_STRING ProcessOuterCOMService__MIDL_ProcFormatString =
+static const ProcessOuterCOMServer_MIDL_PROC_FORMAT_STRING ProcessOuterCOMServer__MIDL_ProcFormatString =
     {
         0,
         {
@@ -126,7 +126,7 @@ static const ProcessOuterCOMService_MIDL_PROC_FORMAT_STRING ProcessOuterCOMServi
 /* 20 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 22 */	NdrFcShort( 0x0 ),	/* 0 */
 
-	/* Parameter strName */
+	/* Parameter sName */
 
 /* 24 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 26 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
@@ -156,7 +156,7 @@ static const ProcessOuterCOMService_MIDL_PROC_FORMAT_STRING ProcessOuterCOMServi
 /* 56 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 58 */	NdrFcShort( 0x0 ),	/* 0 */
 
-	/* Parameter strName */
+	/* Parameter sName */
 
 /* 60 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 62 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
@@ -173,7 +173,7 @@ static const ProcessOuterCOMService_MIDL_PROC_FORMAT_STRING ProcessOuterCOMServi
         }
     };
 
-static const ProcessOuterCOMService_MIDL_TYPE_FORMAT_STRING ProcessOuterCOMService__MIDL_TypeFormatString =
+static const ProcessOuterCOMServer_MIDL_TYPE_FORMAT_STRING ProcessOuterCOMServer__MIDL_TypeFormatString =
     {
         0,
         {
@@ -245,11 +245,11 @@ static const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TA
    GUID={0x00020400,0x0000,0x0000,{0xC0,0x00,0x00,0x00,0x00,0x00,0x00,0x46}} */
 
 
-/* Object interface: IIOuterCOMExport, ver. 0.0,
-   GUID={0x96992788,0xE884,0x4972,{0x8C,0x90,0xC9,0x64,0xD0,0x3D,0xFC,0x5E}} */
+/* Object interface: IOuterCOMExport, ver. 0.0,
+   GUID={0xF57ABC48,0xEC7A,0x4EF5,{0x94,0x49,0x75,0x72,0xDB,0x9D,0x47,0xA6}} */
 
 #pragma code_seg(".orpc")
-static const unsigned short IIOuterCOMExport_FormatStringOffsetTable[] =
+static const unsigned short IOuterCOMExport_FormatStringOffsetTable[] =
     {
     (unsigned short) -1,
     (unsigned short) -1,
@@ -259,31 +259,31 @@ static const unsigned short IIOuterCOMExport_FormatStringOffsetTable[] =
     36
     };
 
-static const MIDL_STUBLESS_PROXY_INFO IIOuterCOMExport_ProxyInfo =
+static const MIDL_STUBLESS_PROXY_INFO IOuterCOMExport_ProxyInfo =
     {
     &Object_StubDesc,
-    ProcessOuterCOMService__MIDL_ProcFormatString.Format,
-    &IIOuterCOMExport_FormatStringOffsetTable[-3],
+    ProcessOuterCOMServer__MIDL_ProcFormatString.Format,
+    &IOuterCOMExport_FormatStringOffsetTable[-3],
     0,
     0,
     0
     };
 
 
-static const MIDL_SERVER_INFO IIOuterCOMExport_ServerInfo = 
+static const MIDL_SERVER_INFO IOuterCOMExport_ServerInfo = 
     {
     &Object_StubDesc,
     0,
-    ProcessOuterCOMService__MIDL_ProcFormatString.Format,
-    &IIOuterCOMExport_FormatStringOffsetTable[-3],
+    ProcessOuterCOMServer__MIDL_ProcFormatString.Format,
+    &IOuterCOMExport_FormatStringOffsetTable[-3],
     0,
     0,
     0,
     0};
-CINTERFACE_PROXY_VTABLE(9) _IIOuterCOMExportProxyVtbl = 
+CINTERFACE_PROXY_VTABLE(9) _IOuterCOMExportProxyVtbl = 
 {
-    &IIOuterCOMExport_ProxyInfo,
-    &IID_IIOuterCOMExport,
+    &IOuterCOMExport_ProxyInfo,
+    &IID_IOuterCOMExport,
     IUnknown_QueryInterface_Proxy,
     IUnknown_AddRef_Proxy,
     IUnknown_Release_Proxy ,
@@ -291,12 +291,12 @@ CINTERFACE_PROXY_VTABLE(9) _IIOuterCOMExportProxyVtbl =
     0 /* IDispatch::GetTypeInfo */ ,
     0 /* IDispatch::GetIDsOfNames */ ,
     0 /* IDispatch_Invoke_Proxy */ ,
-    (void *) (INT_PTR) -1 /* IIOuterCOMExport::SetName */ ,
-    (void *) (INT_PTR) -1 /* IIOuterCOMExport::GetName */
+    (void *) (INT_PTR) -1 /* IOuterCOMExport::SetName */ ,
+    (void *) (INT_PTR) -1 /* IOuterCOMExport::GetName */
 };
 
 
-static const PRPC_STUB_FUNCTION IIOuterCOMExport_table[] =
+static const PRPC_STUB_FUNCTION IOuterCOMExport_table[] =
 {
     STUB_FORWARDING_FUNCTION,
     STUB_FORWARDING_FUNCTION,
@@ -306,12 +306,12 @@ static const PRPC_STUB_FUNCTION IIOuterCOMExport_table[] =
     NdrStubCall2
 };
 
-CInterfaceStubVtbl _IIOuterCOMExportStubVtbl =
+CInterfaceStubVtbl _IOuterCOMExportStubVtbl =
 {
-    &IID_IIOuterCOMExport,
-    &IIOuterCOMExport_ServerInfo,
+    &IID_IOuterCOMExport,
+    &IOuterCOMExport_ServerInfo,
     9,
-    &IIOuterCOMExport_table[-3],
+    &IOuterCOMExport_table[-3],
     CStdStubBuffer_DELEGATING_METHODS
 };
 
@@ -325,7 +325,7 @@ static const MIDL_STUB_DESC Object_StubDesc =
     0,
     0,
     0,
-    ProcessOuterCOMService__MIDL_TypeFormatString.Format,
+    ProcessOuterCOMServer__MIDL_TypeFormatString.Format,
     1, /* -error bounds_check flag */
     0x50002, /* Ndr library version */
     0,
@@ -339,37 +339,37 @@ static const MIDL_STUB_DESC Object_StubDesc =
     0
     };
 
-const CInterfaceProxyVtbl * const _ProcessOuterCOMService_ProxyVtblList[] = 
+const CInterfaceProxyVtbl * const _ProcessOuterCOMServer_ProxyVtblList[] = 
 {
-    ( CInterfaceProxyVtbl *) &_IIOuterCOMExportProxyVtbl,
+    ( CInterfaceProxyVtbl *) &_IOuterCOMExportProxyVtbl,
     0
 };
 
-const CInterfaceStubVtbl * const _ProcessOuterCOMService_StubVtblList[] = 
+const CInterfaceStubVtbl * const _ProcessOuterCOMServer_StubVtblList[] = 
 {
-    ( CInterfaceStubVtbl *) &_IIOuterCOMExportStubVtbl,
+    ( CInterfaceStubVtbl *) &_IOuterCOMExportStubVtbl,
     0
 };
 
-PCInterfaceName const _ProcessOuterCOMService_InterfaceNamesList[] = 
+PCInterfaceName const _ProcessOuterCOMServer_InterfaceNamesList[] = 
 {
-    "IIOuterCOMExport",
+    "IOuterCOMExport",
     0
 };
 
-const IID *  const _ProcessOuterCOMService_BaseIIDList[] = 
+const IID *  const _ProcessOuterCOMServer_BaseIIDList[] = 
 {
     &IID_IDispatch,
     0
 };
 
 
-#define _ProcessOuterCOMService_CHECK_IID(n)	IID_GENERIC_CHECK_IID( _ProcessOuterCOMService, pIID, n)
+#define _ProcessOuterCOMServer_CHECK_IID(n)	IID_GENERIC_CHECK_IID( _ProcessOuterCOMServer, pIID, n)
 
-int __stdcall _ProcessOuterCOMService_IID_Lookup( const IID * pIID, int * pIndex )
+int __stdcall _ProcessOuterCOMServer_IID_Lookup( const IID * pIID, int * pIndex )
 {
     
-    if(!_ProcessOuterCOMService_CHECK_IID(0))
+    if(!_ProcessOuterCOMServer_CHECK_IID(0))
         {
         *pIndex = 0;
         return 1;
@@ -378,13 +378,13 @@ int __stdcall _ProcessOuterCOMService_IID_Lookup( const IID * pIID, int * pIndex
     return 0;
 }
 
-const ExtendedProxyFileInfo ProcessOuterCOMService_ProxyFileInfo = 
+const ExtendedProxyFileInfo ProcessOuterCOMServer_ProxyFileInfo = 
 {
-    (PCInterfaceProxyVtblList *) & _ProcessOuterCOMService_ProxyVtblList,
-    (PCInterfaceStubVtblList *) & _ProcessOuterCOMService_StubVtblList,
-    (const PCInterfaceName * ) & _ProcessOuterCOMService_InterfaceNamesList,
-    (const IID ** ) & _ProcessOuterCOMService_BaseIIDList,
-    & _ProcessOuterCOMService_IID_Lookup, 
+    (PCInterfaceProxyVtblList *) & _ProcessOuterCOMServer_ProxyVtblList,
+    (PCInterfaceStubVtblList *) & _ProcessOuterCOMServer_StubVtblList,
+    (const PCInterfaceName * ) & _ProcessOuterCOMServer_InterfaceNamesList,
+    (const IID ** ) & _ProcessOuterCOMServer_BaseIIDList,
+    & _ProcessOuterCOMServer_IID_Lookup, 
     1,
     2,
     0, /* table of [async_uuid] interfaces */

@@ -14,25 +14,25 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="生成的文件">
-      <UniqueIdentifier>{cb3454d1-4428-4165-adb6-a0984aa372b2}</UniqueIdentifier>
+      <UniqueIdentifier>{86e25992-3102-45ab-a44e-3d57077f0063}</UniqueIdentifier>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="..\..\src\ProcessOuterCOMServer\OuterCOMExport.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ProcessOuterCOMService.cpp">
+    <ClCompile Include="..\..\src\ProcessOuterCOMServer\ProcessOuterCOMServer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="xdlldata.c">
+    <ClCompile Include="..\..\src\ProcessOuterCOMServer\xdlldata.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ProcessOuterCOMService_i.c">
+    <ClCompile Include="..\..\src\ProcessOuterCOMServer\stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\ProcessOuterCOMServer\ProcessOuterCOMServer_i.c">
       <Filter>生成的文件</Filter>
-    </ClCompile>
-    <ClCompile Include="IOuterCOMExport.cpp">
-      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,32 +48,32 @@
     <ClInclude Include="xdlldata.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ProcessOuterCOMService_i.h">
-      <Filter>生成的文件</Filter>
-    </ClInclude>
-    <ClInclude Include="IOuterCOMExport.h">
+    <ClInclude Include="..\..\include\ProcessOuterCOMServer\OuterCOMExport.h">
       <Filter>头文件</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="ProcessOuterCOMService.rc">
-      <Filter>资源文件</Filter>
-    </ResourceCompile>
+    <ClInclude Include="..\..\include\ProcessOuterCOMServer\ProcessOuterCOMServer_i.h">
+      <Filter>生成的文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ProcessOuterCOMService.rgs">
+    <None Include="..\..\src\ProcessOuterCOMServer\OuterCOMExport.rgs">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="IOuterCOMExport.rgs">
+    <None Include="..\..\src\ProcessOuterCOMServer\ProcessOuterCOMServer.rgs">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="ProcessOuterCOMService.idl">
-      <Filter>源文件</Filter>
+    <ResourceCompile Include="..\..\src\ProcessOuterCOMServer\ProcessOuterCOMServer.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\..\include\ProcessOuterCOMServer\ProcessOuterCOMServer.idl">
+      <Filter>头文件</Filter>
     </Midl>
   </ItemGroup>
 </Project>

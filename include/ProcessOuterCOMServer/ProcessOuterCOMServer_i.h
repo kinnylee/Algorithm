@@ -4,9 +4,9 @@
 
 
  /* File created by MIDL compiler version 8.00.0603 */
-/* at Mon Dec 14 23:29:35 2015
+/* at Thu Dec 17 09:40:33 2015
  */
-/* Compiler settings for ProcessOuterCOMService.idl:
+/* Compiler settings for ProcessOuterCOMServer.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0603 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
@@ -36,8 +36,8 @@
 #include "ole2.h"
 #endif /*COM_NO_WINDOWS_H*/
 
-#ifndef __ProcessOuterCOMService_i_h__
-#define __ProcessOuterCOMService_i_h__
+#ifndef __ProcessOuterCOMServer_i_h__
+#define __ProcessOuterCOMServer_i_h__
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
@@ -45,23 +45,23 @@
 
 /* Forward Declarations */ 
 
-#ifndef __IIOuterCOMExport_FWD_DEFINED__
-#define __IIOuterCOMExport_FWD_DEFINED__
-typedef interface IIOuterCOMExport IIOuterCOMExport;
-
-#endif 	/* __IIOuterCOMExport_FWD_DEFINED__ */
-
-
 #ifndef __IOuterCOMExport_FWD_DEFINED__
 #define __IOuterCOMExport_FWD_DEFINED__
-
-#ifdef __cplusplus
-typedef class IOuterCOMExport IOuterCOMExport;
-#else
-typedef struct IOuterCOMExport IOuterCOMExport;
-#endif /* __cplusplus */
+typedef interface IOuterCOMExport IOuterCOMExport;
 
 #endif 	/* __IOuterCOMExport_FWD_DEFINED__ */
+
+
+#ifndef __OuterCOMExport_FWD_DEFINED__
+#define __OuterCOMExport_FWD_DEFINED__
+
+#ifdef __cplusplus
+typedef class OuterCOMExport OuterCOMExport;
+#else
+typedef struct OuterCOMExport OuterCOMExport;
+#endif /* __cplusplus */
+
+#endif 	/* __OuterCOMExport_FWD_DEFINED__ */
 
 
 /* header files for imported files */
@@ -73,60 +73,60 @@ extern "C"{
 #endif 
 
 
-#ifndef __IIOuterCOMExport_INTERFACE_DEFINED__
-#define __IIOuterCOMExport_INTERFACE_DEFINED__
+#ifndef __IOuterCOMExport_INTERFACE_DEFINED__
+#define __IOuterCOMExport_INTERFACE_DEFINED__
 
-/* interface IIOuterCOMExport */
+/* interface IOuterCOMExport */
 /* [unique][nonextensible][dual][uuid][object] */ 
 
 
-EXTERN_C const IID IID_IIOuterCOMExport;
+EXTERN_C const IID IID_IOuterCOMExport;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("96992788-E884-4972-8C90-C964D03DFC5E")
-    IIOuterCOMExport : public IDispatch
+    MIDL_INTERFACE("F57ABC48-EC7A-4EF5-9449-7572DB9D47A6")
+    IOuterCOMExport : public IDispatch
     {
     public:
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE SetName( 
-            /* [in] */ BSTR strName) = 0;
+            /* [in] */ BSTR sName) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE GetName( 
-            /* [retval][out] */ BSTR *strName) = 0;
+            /* [retval][out] */ BSTR *sName) = 0;
         
     };
     
     
 #else 	/* C style interface */
 
-    typedef struct IIOuterCOMExportVtbl
+    typedef struct IOuterCOMExportVtbl
     {
         BEGIN_INTERFACE
         
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IIOuterCOMExport * This,
+            IOuterCOMExport * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IIOuterCOMExport * This);
+            IOuterCOMExport * This);
         
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            IIOuterCOMExport * This);
+            IOuterCOMExport * This);
         
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            IIOuterCOMExport * This,
+            IOuterCOMExport * This,
             /* [out] */ UINT *pctinfo);
         
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            IIOuterCOMExport * This,
+            IOuterCOMExport * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ ITypeInfo **ppTInfo);
         
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            IIOuterCOMExport * This,
+            IOuterCOMExport * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
             /* [range][in] */ UINT cNames,
@@ -134,7 +134,7 @@ EXTERN_C const IID IID_IIOuterCOMExport;
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IIOuterCOMExport * This,
+            IOuterCOMExport * This,
             /* [annotation][in] */ 
             _In_  DISPID dispIdMember,
             /* [annotation][in] */ 
@@ -153,19 +153,19 @@ EXTERN_C const IID IID_IIOuterCOMExport;
             _Out_opt_  UINT *puArgErr);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *SetName )( 
-            IIOuterCOMExport * This,
-            /* [in] */ BSTR strName);
+            IOuterCOMExport * This,
+            /* [in] */ BSTR sName);
         
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *GetName )( 
-            IIOuterCOMExport * This,
-            /* [retval][out] */ BSTR *strName);
+            IOuterCOMExport * This,
+            /* [retval][out] */ BSTR *sName);
         
         END_INTERFACE
-    } IIOuterCOMExportVtbl;
+    } IOuterCOMExportVtbl;
 
-    interface IIOuterCOMExport
+    interface IOuterCOMExport
     {
-        CONST_VTBL struct IIOuterCOMExportVtbl *lpVtbl;
+        CONST_VTBL struct IOuterCOMExportVtbl *lpVtbl;
     };
 
     
@@ -173,34 +173,34 @@ EXTERN_C const IID IID_IIOuterCOMExport;
 #ifdef COBJMACROS
 
 
-#define IIOuterCOMExport_QueryInterface(This,riid,ppvObject)	\
+#define IOuterCOMExport_QueryInterface(This,riid,ppvObject)	\
     ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define IIOuterCOMExport_AddRef(This)	\
+#define IOuterCOMExport_AddRef(This)	\
     ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define IIOuterCOMExport_Release(This)	\
+#define IOuterCOMExport_Release(This)	\
     ( (This)->lpVtbl -> Release(This) ) 
 
 
-#define IIOuterCOMExport_GetTypeInfoCount(This,pctinfo)	\
+#define IOuterCOMExport_GetTypeInfoCount(This,pctinfo)	\
     ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
-#define IIOuterCOMExport_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+#define IOuterCOMExport_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
     ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
-#define IIOuterCOMExport_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+#define IOuterCOMExport_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
     ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
-#define IIOuterCOMExport_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+#define IOuterCOMExport_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
     ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 
-#define IIOuterCOMExport_SetName(This,strName)	\
-    ( (This)->lpVtbl -> SetName(This,strName) ) 
+#define IOuterCOMExport_SetName(This,sName)	\
+    ( (This)->lpVtbl -> SetName(This,sName) ) 
 
-#define IIOuterCOMExport_GetName(This,strName)	\
-    ( (This)->lpVtbl -> GetName(This,strName) ) 
+#define IOuterCOMExport_GetName(This,sName)	\
+    ( (This)->lpVtbl -> GetName(This,sName) ) 
 
 #endif /* COBJMACROS */
 
@@ -210,27 +210,27 @@ EXTERN_C const IID IID_IIOuterCOMExport;
 
 
 
-#endif 	/* __IIOuterCOMExport_INTERFACE_DEFINED__ */
+#endif 	/* __IOuterCOMExport_INTERFACE_DEFINED__ */
 
 
 
-#ifndef __ProcessOuterCOMServiceLib_LIBRARY_DEFINED__
-#define __ProcessOuterCOMServiceLib_LIBRARY_DEFINED__
+#ifndef __ProcessOuterCOMServerLib_LIBRARY_DEFINED__
+#define __ProcessOuterCOMServerLib_LIBRARY_DEFINED__
 
-/* library ProcessOuterCOMServiceLib */
+/* library ProcessOuterCOMServerLib */
 /* [version][uuid] */ 
 
 
-EXTERN_C const IID LIBID_ProcessOuterCOMServiceLib;
+EXTERN_C const IID LIBID_ProcessOuterCOMServerLib;
 
-EXTERN_C const CLSID CLSID_IOuterCOMExport;
+EXTERN_C const CLSID CLSID_OuterCOMExport;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("1B7351AC-671A-4131-957C-42DC82FCA70E")
-IOuterCOMExport;
+class DECLSPEC_UUID("C40205AC-280F-44FE-9F77-A542F2AD10E0")
+OuterCOMExport;
 #endif
-#endif /* __ProcessOuterCOMServiceLib_LIBRARY_DEFINED__ */
+#endif /* __ProcessOuterCOMServerLib_LIBRARY_DEFINED__ */
 
 /* Additional Prototypes for ALL interfaces */
 

@@ -1,6 +1,8 @@
 #include <process.h>
 #include <iostream>
 #include <objbase.h>
+#include <tchar.h>
+#include "comutil.h"
 
 #include "SortTest.h"
 #include "Common.h"
@@ -12,7 +14,8 @@
 #include "DoubleLinkList.h"
 #include "StackList.h"
 
-#include "ProcessOuterCOMService_i.h"
+#include "ProcessOuterCOMServer_i.h"
+#include "ProcessOuterCOMServer_i.c"
 #include <vector>
 
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
@@ -24,17 +27,15 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 int main()
 {
 
-    //CoInitialize(NULL);
-    //CLSID clsID;
-    //HRESULT hr;
-    //hr = CLSIDFromProgID(OLESTR("ProcessOuterCOMService"), &clsID);
-    //IOuterCOMExport *pOuterExport = nullptr;
-    //hr = CoCreateInstance(/*IID_IIOuterCOMExport*/clsID, NULL, CLSCTX_INPROC, _uuidof(IOuterCOMExport),
-    //    (void**)&pOuterExport);
-   /* pOuterExport->SetName(SysAllocString(_T("Lee")));
+    CoInitialize(NULL);
+    HRESULT hr;
+    IOuterCOMExport *pOuterExport = nullptr;
+    hr = CoCreateInstance(CLSID_OuterCOMExport, NULL, CLSCTX_LOCAL_SERVER, IID_IOuterCOMExport,
+        (void**)&pOuterExport);
+    pOuterExport->SetName(SysAllocString(_T("Lee")));
     BSTR name;
     pOuterExport->GetName(&name);
-    std::cout << _bstr_t(name) << std::endl;*/
+    std::cout << _bstr_t(name) << std::endl;
     CoUninitialize();
     system("pause");
     return 1;

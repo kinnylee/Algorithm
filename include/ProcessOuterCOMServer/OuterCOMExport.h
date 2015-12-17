@@ -1,11 +1,11 @@
-// IOuterCOMExport.h : CIOuterCOMExport 的声明
+// OuterCOMExport.h : COuterCOMExport 的声明
 
 #pragma once
 #include "resource.h"       // 主符号
 
 
 
-#include "ProcessOuterCOMService_i.h"
+#include "ProcessOuterCOMServer_i.h"
 
 
 
@@ -16,23 +16,23 @@
 using namespace ATL;
 
 
-// CIOuterCOMExport
+// COuterCOMExport
 
-class ATL_NO_VTABLE CIOuterCOMExport :
+class ATL_NO_VTABLE COuterCOMExport :
 	public CComObjectRootEx<CComSingleThreadModel>,
-	public CComCoClass<CIOuterCOMExport, &CLSID_IOuterCOMExport>,
-	public IDispatchImpl<IIOuterCOMExport, &IID_IIOuterCOMExport, &LIBID_ProcessOuterCOMServiceLib, /*wMajor =*/ 1, /*wMinor =*/ 0>
+	public CComCoClass<COuterCOMExport, &CLSID_OuterCOMExport>,
+	public IDispatchImpl<IOuterCOMExport, &IID_IOuterCOMExport, &LIBID_ProcessOuterCOMServerLib, /*wMajor =*/ 1, /*wMinor =*/ 0>
 {
 public:
-	CIOuterCOMExport()
+	COuterCOMExport()
 	{
 	}
 
-DECLARE_REGISTRY_RESOURCEID(IDR_IOUTERCOMEXPORT)
+DECLARE_REGISTRY_RESOURCEID(IDR_OUTERCOMEXPORT)
 
 
-BEGIN_COM_MAP(CIOuterCOMExport)
-	COM_INTERFACE_ENTRY(IIOuterCOMExport)
+BEGIN_COM_MAP(COuterCOMExport)
+	COM_INTERFACE_ENTRY(IOuterCOMExport)
 	COM_INTERFACE_ENTRY(IDispatch)
 END_COM_MAP()
 
@@ -49,13 +49,13 @@ END_COM_MAP()
 	{
 	}
 
+public:
+    STDMETHOD(SetName)(BSTR sName);
+    STDMETHOD(GetName)(BSTR* sName);
+
+
 private:
     wchar_t *m_pName;
-
-public:
-
-    STDMETHOD(SetName)(BSTR strName);
-    STDMETHOD(GetName)(BSTR* strName);
 };
 
-OBJECT_ENTRY_AUTO(__uuidof(IOuterCOMExport), CIOuterCOMExport)
+OBJECT_ENTRY_AUTO(__uuidof(OuterCOMExport), COuterCOMExport)

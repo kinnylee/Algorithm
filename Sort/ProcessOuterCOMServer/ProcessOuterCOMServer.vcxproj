@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D55DC7D5-5F83-4602-9D0A-A36DB89570F0}</ProjectGuid>
+    <ProjectGuid>{42BBD169-027F-4A36-8FF8-FA273471B96C}</ProjectGuid>
     <Keyword>AtlProj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -41,31 +41,32 @@
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\bin</OutDir>
-    <IntDir>..\..\temp\ProcessOuterCOMService</IntDir>
+    <IntDir>..\..\temp\ProcessOuterCOMServer</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\bin</OutDir>
-    <IntDir>..\..\temp\ProcessOuterCOMService</IntDir>
+    <IntDir>..\..\temp\ProcessOuterCOMServer</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\include\ProcessOuterCOMServer</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>ProcessOuterCOMService_i.h</HeaderFileName>
-      <InterfaceIdentifierFileName>ProcessOuterCOMService_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>ProcessOuterCOMService_p.c</ProxyFileName>
+      <HeaderFileName>ProcessOuterCOMServer_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName>ProcessOuterCOMServer_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>ProcessOuterCOMServer_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)ProcessOuterCOMService.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)ProcessOuterCOMServer.tlb</TypeLibraryName>
       <DllDataFileName />
       <ValidateAllParameters>true</ValidateAllParameters>
     </Midl>
@@ -77,29 +78,28 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <RegisterOutput>false</RegisterOutput>
-      <IgnoreAllDefaultLibraries>
-      </IgnoreAllDefaultLibraries>
-      <AdditionalDependencies>comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RegisterOutput>true</RegisterOutput>
+      <AdditionalDependencies>comsupp.lib;comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\include\ProcessOuterCOMServer</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>ProcessOuterCOMService_i.h</HeaderFileName>
-      <InterfaceIdentifierFileName>ProcessOuterCOMService_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>ProcessOuterCOMService_p.c</ProxyFileName>
+      <HeaderFileName>ProcessOuterCOMServer_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName>ProcessOuterCOMServer_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>ProcessOuterCOMServer_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)ProcessOuterCOMService.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)ProcessOuterCOMServer.tlb</TypeLibraryName>
       <DllDataFileName />
       <ValidateAllParameters>true</ValidateAllParameters>
     </Midl>
@@ -113,56 +113,37 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <RegisterOutput>false</RegisterOutput>
-      <IgnoreAllDefaultLibraries>
-      </IgnoreAllDefaultLibraries>
-      <AdditionalDependencies>comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RegisterOutput>true</RegisterOutput>
+      <AdditionalDependencies>comsupp.lib;comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="IOuterCOMExport.cpp" />
-    <ClCompile Include="ProcessOuterCOMService.cpp" />
-    <ClCompile Include="ProcessOuterCOMService_i.c">
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="xdlldata.c">
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="..\..\include\ProcessOuterCOMServer\ProcessOuterCOMServer_i.c" />
+    <ClCompile Include="..\..\src\ProcessOuterCOMServer\OuterCOMExport.cpp" />
+    <ClCompile Include="..\..\src\ProcessOuterCOMServer\ProcessOuterCOMServer.cpp" />
+    <ClCompile Include="..\..\src\ProcessOuterCOMServer\stdafx.cpp" />
+    <ClCompile Include="..\..\src\ProcessOuterCOMServer\xdlldata.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IOuterCOMExport.h" />
-    <ClInclude Include="ProcessOuterCOMService_i.h" />
+    <ClInclude Include="..\..\include\ProcessOuterCOMServer\OuterCOMExport.h" />
+    <ClInclude Include="..\..\include\ProcessOuterCOMServer\ProcessOuterCOMServer_i.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="xdlldata.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ProcessOuterCOMService.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="IOuterCOMExport.rgs" />
-    <None Include="ProcessOuterCOMService.rgs" />
+    <None Include="..\..\src\ProcessOuterCOMServer\OuterCOMExport.rgs" />
+    <None Include="..\..\src\ProcessOuterCOMServer\ProcessOuterCOMServer.rgs" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="ProcessOuterCOMService.idl" />
+    <ResourceCompile Include="..\..\src\ProcessOuterCOMServer\ProcessOuterCOMServer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\..\include\ProcessOuterCOMServer\ProcessOuterCOMServer.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

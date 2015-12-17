@@ -1,0 +1,36 @@
+// ProcessOuterCOMServer.idl : ProcessOuterCOMServer 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(ProcessOuterCOMServer.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(F57ABC48-EC7A-4EF5-9449-7572DB9D47A6),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IOuterCOMExport : IDispatch{
+    [id(1), helpstring("设置名称")] HRESULT SetName([in] BSTR sName);
+    [id(2), helpstring("获取名称")] HRESULT GetName([out, retval] BSTR* sName);
+};
+[
+	uuid(5702C6BE-9FDC-437E-A1D4-A326FD561B80),
+	version(1.0),
+]
+library ProcessOuterCOMServerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(C40205AC-280F-44FE-9F77-A542F2AD10E0)		
+	]
+	coclass OuterCOMExport
+	{
+		[default] interface IOuterCOMExport;
+	};
+};
+

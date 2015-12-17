@@ -57,13 +57,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\include\Sort;..\..\include\Basic;..\..\include\DataStruct;..\..\Sort\ProcessOuterCOMService</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\Sort;..\..\include\Basic;..\..\include\DataStruct;..\..\include\ProcessOuterCOMServer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\..\bin</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Basic.lib;Sort.lib;DataStruct.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Basic.lib;Sort.lib;DataStruct.lib;comsupp.lib;comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -76,7 +76,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\include\Sort;..\..\include\Basic;..\..\include\DataStruct;..\..\Sort\ProcessOuterCOMService</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\Sort;..\..\include\Basic;..\..\include\DataStruct;..\..\include\ProcessOuterCOMServer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -84,7 +84,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>..\..\bin</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Basic.lib;Sort.lib;DataStruct.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Basic.lib;Sort.lib;DataStruct.lib;comsupp.lib;comsuppw.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

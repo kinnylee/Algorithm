@@ -13,6 +13,6 @@
 #define ENTRY_PREFIX	Prx
 
 #include "dlldata.c"
-#include "ProcessOuterCOMService_p.c"
+#include "ProcessOuterCOMServer_p.c"
 
 #endif //_MERGE_PROXYSTUB
