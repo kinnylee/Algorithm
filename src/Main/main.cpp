@@ -13,6 +13,7 @@
 #include "LinkList.h"
 #include "DoubleLinkList.h"
 #include "StackList.h"
+#include "CyclicLinkList.h"
 
 #include "ProcessOuterCOMServer_i.h"
 #include "ProcessOuterCOMServer_i.c"
@@ -26,20 +27,29 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-
-    CoInitialize(NULL);
-    HRESULT hr;
-    IOuterCOMExport *pOuterExport = nullptr;
-    hr = CoCreateInstance(CLSID_OuterCOMExport, NULL, CLSCTX_LOCAL_SERVER, IID_IOuterCOMExport,
-        (void**)&pOuterExport);
-    pOuterExport->SetName(SysAllocString(_T("Lee")));
-    BSTR name;
-    pOuterExport->GetName(&name);
-    std::cout << _bstr_t(name) << std::endl;
-    CoUninitialize();
+    CyclicLinkList *pList = new CyclicLinkList;
+    pList->FrontInsert(1);
+    pList->TailInsert(4);
+    pList->InceraseInsert(2);
+    pList->TailInsert(9);
+    pList->FrontInsert(8);
+    pList->Delete(2);
+    pList->PrintOut();
+    
     system("pause");
     return 1;
 }
+
+    //CoInitialize(NULL);
+    //HRESULT hr;
+    //IOuterCOMExport *pOuterExport = nullptr;
+    //hr = CoCreateInstance(CLSID_OuterCOMExport, NULL, CLSCTX_LOCAL_SERVER, IID_IOuterCOMExport,
+    //    (void**)&pOuterExport);
+    //pOuterExport->SetName(SysAllocString(_T("Lee")));
+    //BSTR name;
+    //pOuterExport->GetName(&name);
+    //std::cout << _bstr_t(name) << std::endl;
+    //CoUninitialize();
 
     //StackList *pList = new StackList;
     //pList->Push(1);

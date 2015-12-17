@@ -2,13 +2,7 @@
 #define _DOUBLE_LINKLIST_H_
 
 #include "DataStruct_Global.h"
-
-typedef struct DLinkNode
-{
-    int m_nData;
-    DLinkNode *m_pPrev;
-    DLinkNode *m_pNext;
-}DLinkNode;
+#include "DataType.h"
 
 class DATASTRUCT_EXPORT DoubleLinkList
 {

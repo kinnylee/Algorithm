@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\DataStruct\CyclicLinkList.cpp" />
     <ClCompile Include="..\..\src\DataStruct\DoubleLinkList.cpp" />
     <ClCompile Include="..\..\src\DataStruct\LinkList.cpp" />
     <ClCompile Include="..\..\src\DataStruct\PriorityQueueHeap.cpp" />
@@ -169,7 +170,9 @@
     <ClCompile Include="..\..\src\DataStruct\StackList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\DataStruct\CyclicLinkList.h" />
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h" />
+    <ClInclude Include="..\..\include\DataStruct\DataType.h" />
     <ClInclude Include="..\..\include\DataStruct\DoubleLinkList.h" />
     <ClInclude Include="..\..\include\DataStruct\LinkList.h" />
     <ClInclude Include="..\..\include\DataStruct\PriorityQueueHeap.h" />

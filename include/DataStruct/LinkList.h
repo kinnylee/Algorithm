@@ -2,12 +2,7 @@
 #define _LINKLIST_H_
 
 #include "DataStruct_Global.h"
-
-typedef struct LinkNode
-{
-    int m_nData;
-    LinkNode *m_pNext;
-}LinkNode;
+#include "DataType.h"
 
 class DATASTRUCT_EXPORT LinkList
 {
