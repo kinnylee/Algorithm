@@ -165,6 +165,7 @@
     <ClCompile Include="..\..\src\DataStruct\PriorityQueueHeap.cpp" />
     <ClCompile Include="..\..\src\DataStruct\Queue.cpp" />
     <ClCompile Include="..\..\src\DataStruct\QueueDoubleStack.cpp" />
+    <ClCompile Include="..\..\src\DataStruct\QueueList.cpp" />
     <ClCompile Include="..\..\src\DataStruct\Stack.cpp" />
     <ClCompile Include="..\..\src\DataStruct\StackDoubleQueue.cpp" />
     <ClCompile Include="..\..\src\DataStruct\StackList.cpp" />
@@ -178,6 +179,7 @@
     <ClInclude Include="..\..\include\DataStruct\PriorityQueueHeap.h" />
     <ClInclude Include="..\..\include\DataStruct\Queue.h" />
     <ClInclude Include="..\..\include\DataStruct\QueueDoubleStack.h" />
+    <ClInclude Include="..\..\include\DataStruct\QueueList.h" />
     <ClInclude Include="..\..\include\DataStruct\Stack.h" />
     <ClInclude Include="..\..\include\DataStruct\StackDoubleQueue.h" />
     <ClInclude Include="..\..\include\DataStruct\StackList.h" />

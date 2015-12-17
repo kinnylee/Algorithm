@@ -26,7 +26,7 @@ void CyclicLinkList::TailInsert(int nKey)
     pNode->m_nData = nKey;
 
     //empty
-    if (m_pTail == m_pHead)
+    if (Empty())
     {
         m_pHead->m_pNext = pNode;
         pNode->m_pNext = m_pHead;
@@ -46,7 +46,7 @@ void CyclicLinkList::FrontInsert(int nKey)
     pNode->m_nData = nKey;
 
     //empty
-    if (m_pTail == m_pHead)
+    if (Empty())
     {
         m_pHead->m_pNext = pNode;
         pNode->m_pNext = m_pHead;
@@ -99,7 +99,7 @@ void CyclicLinkList::InceraseInsert(int nKey)
 
 void CyclicLinkList::Delete(int nKey)
 {
-    if (m_pHead == m_pTail)
+    if (Empty())
     {
         return;
     }
@@ -141,5 +141,53 @@ void CyclicLinkList::PrintOut()
     {
         std::cout << pNode->m_nData << std::endl;
         pNode = pNode->m_pNext;
+    }
+}
+
+bool CyclicLinkList::Empty()
+{
+    return m_pHead == m_pTail;
+}
+
+int CyclicLinkList::TailValue()
+{
+    if (Empty())
+    {
+        return -1;
+    }
+    else
+    {
+        return m_pTail->m_nData;
+    }
+}
+
+int CyclicLinkList::FrontValue()
+{
+    if (Empty())
+    {
+        return -1;
+    }
+    else
+    {
+        return m_pHead->m_pNext->m_nData;
+    }
+}
+
+void CyclicLinkList::DeleteFront()
+{
+    if (Empty())
+    {
+        return;
+    }
+    else
+    {
+        LinkNode *pNode = m_pHead->m_pNext;
+        m_pHead->m_pNext = pNode->m_pNext;
+        if (m_pTail == pNode)
+        {
+            m_pTail = m_pHead;
+        }
+        delete pNode;
+        pNode = nullptr;
     }
 }

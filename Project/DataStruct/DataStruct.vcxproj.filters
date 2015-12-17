@@ -42,6 +42,9 @@
     <ClCompile Include="..\..\src\DataStruct\CyclicLinkList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\DataStruct\QueueList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h">
@@ -75,6 +78,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\DataStruct\DataType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\DataStruct\QueueList.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

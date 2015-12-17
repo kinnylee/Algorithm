@@ -14,6 +14,7 @@
 #include "DoubleLinkList.h"
 #include "StackList.h"
 #include "CyclicLinkList.h"
+#include "QueueList.h"
 
 #include "ProcessOuterCOMServer_i.h"
 #include "ProcessOuterCOMServer_i.c"
@@ -27,18 +28,30 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    CyclicLinkList *pList = new CyclicLinkList;
-    pList->FrontInsert(1);
-    pList->TailInsert(4);
-    pList->InceraseInsert(2);
-    pList->TailInsert(9);
-    pList->FrontInsert(8);
-    pList->Delete(2);
-    pList->PrintOut();
+    QueueList *pList = new QueueList;
+    pList->EnQueue(2);
+    pList->EnQueue(1);
+    pList->EnQueue(3);
+    std::cout << pList->DeQueue() << std::endl;
+    std::cout << pList->DeQueue() << std::endl;
+    std::cout << pList->DeQueue() << std::endl;
+
+    delete pList;
+    pList = nullptr;
     
     system("pause");
     return 1;
 }
+
+    //CyclicLinkList *pList = new CyclicLinkList;
+    //pList->FrontInsert(1);
+    //pList->TailInsert(4);
+    //pList->InceraseInsert(2);
+    //pList->TailInsert(9);
+    //pList->FrontInsert(8);
+    //pList->Delete(2);
+    //pList->PrintOut();
+    //delete pList; pList = nullptr;
 
     //CoInitialize(NULL);
     //HRESULT hr;

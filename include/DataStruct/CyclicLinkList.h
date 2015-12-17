@@ -13,9 +13,17 @@ public:
     void TailInsert(int nKey);
     void FrontInsert(int nKey);
     void InceraseInsert(int nKey);
+
     void Delete(int nKey);
-    void PrintOut();
+    void DeleteFront();
+
+    int TailValue();
+    int FrontValue();
+
     int Length();
+    bool Empty();
+
+    void PrintOut();
 
 private:
     LinkNode *m_pHead;
