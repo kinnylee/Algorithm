@@ -13,4 +13,6 @@
 /bin
 /bin/*.exp
 /bin/*.exe
+/bin/*.ilk
+/bin/*.pdb
 
