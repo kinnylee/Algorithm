@@ -1,15 +1,6 @@
-/Sort/*.sdf
-/Sort/*.opensdf
-/Sort/Debug
-/Basic/Basic/Debug
-/Sort/Sort/Debug
-/Sort/DataStruct/Debug
-/Sort/COM/Debug
-/Sort/ThirdPartDemo/Debug
+/Project/*.sdf
+/Project/*.opensdf
 /temp
-/Sort/ipch
-/Sort/x64
-/Sort/Main/x64
 *.user
 *.aps
 *.suo
@@ -21,4 +12,5 @@
 
 /bin
 /bin/*.exp
+/bin/*.exe
 
