@@ -1,6 +1,5 @@
 /Sort/*.sdf
 /Sort/*.opensdf
-/Sort/Sort.v12.suo
 /Sort/Debug
 /Basic/Basic/Debug
 /Sort/Sort/Debug
@@ -9,6 +8,11 @@
 /Sort/ThirdPartDemo/Debug
 /temp
 /Sort/ipch
+/Sort/x64
+/Sort/Main/x64
+*.user
+*.aps
+*.suo
 
 /lib/*.exe
 /lib/*.exp
