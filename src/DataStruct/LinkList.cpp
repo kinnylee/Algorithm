@@ -203,3 +203,25 @@ void LinkList::Reverse()
     }
 }
 
+LinkNode* LinkList::Reverse(LinkNode *pNode)
+{
+    if (nullptr == pNode)
+    {
+        return m_pHead;
+    }
+    LinkNode *pHead = Reverse(pNode->m_pNext);
+    pNode->m_pNext->m_pNext = pHead;
+    pNode->m_pNext = nullptr;
+    return pHead;
+}
+
+void LinkList::RecursionReverse()
+{
+    if (Empty())
+    {
+        return;
+    }
+
+    LinkNode *pNode = m_pHead->m_pNext;
+}
+

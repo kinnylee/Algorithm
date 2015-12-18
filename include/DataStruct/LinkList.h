@@ -23,11 +23,15 @@ public:
     void DeleteFront();
 
     void Reverse();
+    void RecursionReverse();
 
     void Clear();
     bool Empty();
 
     void PrintOut();
+
+private:
+    LinkNode* Reverse(LinkNode *pNode);
 
 private:
     LinkNode *m_pHead;

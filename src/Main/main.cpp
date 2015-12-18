@@ -44,7 +44,8 @@ int main()
     //pHead->DeleteNodeTraval(pNode);
     ////pHead->Clear();
     ////  pHead->DeleteTail();//
-    //pHead->Reverse();
+    //// pHead->Reverse();
+    //pHead->RecursionReverse();
     //pHead->PrintOut();
     //delete pHead;
     //pHead = nullptr;
