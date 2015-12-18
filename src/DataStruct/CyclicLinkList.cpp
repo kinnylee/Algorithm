@@ -191,3 +191,24 @@ void CyclicLinkList::DeleteFront()
         pNode = nullptr;
     }
 }
+
+LinkNode* CyclicLinkList::Search(int nKey)
+{
+    if (Empty())
+    {
+        return nullptr;
+    }
+    else
+    {
+        LinkNode *pNode = m_pHead->m_pNext;
+        while (pNode != m_pHead && pNode->m_nData != nKey)
+        {
+            pNode = pNode->m_pNext;
+        }
+        if (pNode == m_pHead)
+        {
+            return nullptr;
+        }
+        return pNode;
+    }
+}

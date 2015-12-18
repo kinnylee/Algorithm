@@ -14,6 +14,8 @@ public:
     void FrontInsert(int nKey);
     void InceraseInsert(int nKey);
 
+    LinkNode* Search(int nKey);
+
     void Delete(int nKey);
     void DeleteFront();
 
