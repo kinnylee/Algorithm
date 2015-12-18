@@ -15,4 +15,10 @@ typedef struct DLinkNode
     DLinkNode *m_pNext;
 }DLinkNode;
 
+typedef struct DLinkNodeOnePtr
+{
+    int m_nData;
+    DLinkNodeOnePtr *m_pNP;
+}DLinkNodeOnePtr;
+
 #endif
