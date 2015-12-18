@@ -182,3 +182,24 @@ bool LinkList::Empty()
     return m_pHead->m_pNext == nullptr;
 }
 
+void LinkList::Reverse()
+{
+    if (Empty())
+    {
+        return;
+    }
+
+    LinkNode *pPre = m_pHead->m_pNext;
+    LinkNode *pCurr = pPre->m_pNext;
+    pPre->m_pNext = nullptr;
+    LinkNode *pNext = nullptr;
+    while (nullptr != pCurr)
+    {
+        m_pHead->m_pNext = pCurr;
+        pNext = pCurr->m_pNext;
+        pCurr->m_pNext = pPre;
+        pPre = pCurr;
+        pCurr = pNext;
+    }
+}
+

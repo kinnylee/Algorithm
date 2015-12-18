@@ -12,15 +12,21 @@ public:
 
     void FrontInsert(int key);
     void TailInsert(int key);
+
     LinkNode* Search(int key);
     int First();
+
     void Delete(int key);
     void DeleteNodeMove(LinkNode *pNode);
     void DeleteNodeTraval(LinkNode *pNode);
     void DeleteTail();
     void DeleteFront();
+
+    void Reverse();
+
     void Clear();
     bool Empty();
+
     void PrintOut();
 
 private:

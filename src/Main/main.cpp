@@ -28,23 +28,40 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    CyclicLinkList *pList = new CyclicLinkList;
-    CyclicLinkList *pList2 = new CyclicLinkList;
-    pList->FrontInsert(1);
-    pList->TailInsert(4);
-    pList->InceraseInsert(2);
-    pList->TailInsert(9);
-    pList->FrontInsert(8);
-    pList->Delete(2);
-    pList2->FrontInsert(10);
-    pList2->TailInsert(11);
-    pList->Union(pList2);
-    pList->PrintOut();
-    delete pList; pList = nullptr;
+    
     
     system("pause");
     return 1;
 }
+
+    //LinkList *pHead = new LinkList;
+    //pHead->FrontInsert(1);
+    //pHead->FrontInsert(2);
+    //pHead->FrontInsert(3);
+    //pHead->FrontInsert(4);
+    //pHead->FrontInsert(7);
+    //LinkNode *pNode = pHead->Search(2);
+    //pHead->DeleteNodeTraval(pNode);
+    ////pHead->Clear();
+    ////  pHead->DeleteTail();//
+    //pHead->Reverse();
+    //pHead->PrintOut();
+    //delete pHead;
+    //pHead = nullptr;
+
+    //CyclicLinkList *pList = new CyclicLinkList;
+    //CyclicLinkList *pList2 = new CyclicLinkList;
+    //pList->FrontInsert(1);
+    //pList->TailInsert(4);
+    //pList->InceraseInsert(2);
+    //pList->TailInsert(9);
+    //pList->FrontInsert(8);
+    //pList->Delete(2);
+    //pList2->FrontInsert(10);
+    //pList2->TailInsert(11);
+    //pList->Union(pList2);
+    //pList->PrintOut();
+    //delete pList; pList = nullptr;
 
     //QueueList *pList = new QueueList;
     //pList->EnQueue(2);
@@ -88,17 +105,7 @@ int main()
     //delete pDLink;
     //pDLink = nullptr;
 
-    //LinkList *pHead = new LinkList;
-    //pHead->FrontInsert(1);
-    //pHead->FrontInsert(2);
-    //pHead->FrontInsert(3);
-    //LinkNode *pNode = pHead->Search(2);
-    //pHead->DeleteNodeTraval(pNode);
-    //pHead->Clear();
-    ////  pHead->DeleteTail();//
-    //pHead->PrintOut();
-    //delete pHead;
-    //pHead = nullptr;
+    
 
     /*StackDoubleQueue stack(5);
     stack.Push(1);
