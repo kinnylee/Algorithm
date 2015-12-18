@@ -15,6 +15,7 @@ public:
     void InceraseInsert(int nKey);
 
     LinkNode* Search(int nKey);
+    CyclicLinkList* Union(CyclicLinkList* pList);
 
     void Delete(int nKey);
     void DeleteFront();

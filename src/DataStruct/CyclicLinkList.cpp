@@ -212,3 +212,23 @@ LinkNode* CyclicLinkList::Search(int nKey)
         return pNode;
     }
 }
+
+CyclicLinkList* CyclicLinkList::Union(CyclicLinkList* pList)
+{
+    if (Empty())
+    {
+        return pList;
+    }
+    else if (pList->Empty())
+    {
+        return this;
+    }
+    else
+    {
+        m_pTail->m_pNext = pList->m_pHead->m_pNext;
+        pList->m_pTail->m_pNext = m_pHead;
+        m_pTail = pList->m_pTail;
+        return this;
+    }
+    return nullptr;
+}
