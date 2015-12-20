@@ -1,5 +1,6 @@
 /Project/*.sdf
 /Project/*.opensdf
+/Project/ipch/
 /temp
 *.user
 *.aps

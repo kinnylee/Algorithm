@@ -66,8 +66,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\..\bin</OutDir>
-    <IntDir>..\..\temp\ProcessOuterCOMServer</IntDir>
+    <OutDir>..\..\bin\</OutDir>
+    <IntDir>..\..\temp\ProcessOuterCOMServer\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -76,8 +76,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\..\bin</OutDir>
-    <IntDir>..\..\temp\ProcessOuterCOMServer</IntDir>
+    <OutDir>..\..\bin\</OutDir>
+    <IntDir>..\..\temp\ProcessOuterCOMServer\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
