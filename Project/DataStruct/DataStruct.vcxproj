@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\DataStruct\BinaryTree.cpp" />
     <ClCompile Include="..\..\src\DataStruct\CyclicLinkList.cpp" />
     <ClCompile Include="..\..\src\DataStruct\DoubleLinkList.cpp" />
     <ClCompile Include="..\..\src\DataStruct\DoubleLinkListOnePtr.cpp" />
@@ -172,6 +173,7 @@
     <ClCompile Include="..\..\src\DataStruct\StackList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\DataStruct\BinaryTree.h" />
     <ClInclude Include="..\..\include\DataStruct\CyclicLinkList.h" />
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h" />
     <ClInclude Include="..\..\include\DataStruct\DataType.h" />

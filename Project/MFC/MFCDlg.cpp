@@ -95,9 +95,9 @@ UINT ThreadProc(LPVOID pvParam)
     ThreadInfo *info = (ThreadInfo*)pvParam;
     for (int i = 0; i < info->m_nRange; ++i)
     {
-        ::SendMessage(info->m_hWnd, WM_INFO, i * 2, i);
+        ::PostMessage(info->m_hWnd, WM_INFO, i * 2, i);
     }
-    ::SendMessage(info->m_hWnd, WM_INFO, 0, -1);
+    ::PostMessage(info->m_hWnd, WM_INFO, 0, -1);
     return 0;
 }
 

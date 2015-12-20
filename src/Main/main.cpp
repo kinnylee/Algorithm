@@ -15,6 +15,7 @@
 #include "StackList.h"
 #include "CyclicLinkList.h"
 #include "QueueList.h"
+#include "BinaryTree.h"
 
 #include "ProcessOuterCOMServer_i.h"
 #include "ProcessOuterCOMServer_i.c"
@@ -28,7 +29,14 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    
+    BinaryTree *pTree = new BinaryTree(5);
+    BTreeNode *pLeft = pTree->InsertLeftNode(pTree->Root(), 6);
+    BTreeNode *pRight = pTree->InsertRightNode(pTree->Root(), 7);
+    pTree->InsertRightNode(pLeft, 8);
+    pTree->InsertLeftNode(pRight, 9);
+    pTree->PreOrder();
+    pTree->InOrder();
+    pTree->PostOrder();
     
     system("pause");
     return 1;

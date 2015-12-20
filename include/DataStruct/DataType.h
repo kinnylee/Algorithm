@@ -21,4 +21,11 @@ typedef struct DLinkNodeOnePtr
     DLinkNodeOnePtr *m_pNP;
 }DLinkNodeOnePtr;
 
+typedef struct BTreeNode
+{
+    int m_nData;
+    BTreeNode *m_pLeft;
+    BTreeNode *m_pRight;
+}BTreeNode;
+
 #endif

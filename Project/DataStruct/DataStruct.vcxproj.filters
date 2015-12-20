@@ -48,6 +48,9 @@
     <ClCompile Include="..\..\src\DataStruct\DoubleLinkListOnePtr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\DataStruct\BinaryTree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h">
@@ -87,6 +90,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\DataStruct\DoubleLinkListOnePtr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\DataStruct\BinaryTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
