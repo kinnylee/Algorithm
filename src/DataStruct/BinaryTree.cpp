@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stack>
 
 #include "BinaryTree.h"
 
@@ -71,11 +72,6 @@ BTreeNode* BinaryTree::Root()
     return m_pRoot;
 }
 
-void BinaryTree::NonRecTraverse()
-{
-
-}
-
 void BinaryTree::InOrder()
 {
     std::cout << "InOrder: ";
@@ -108,5 +104,63 @@ void BinaryTree::PostPrint(BTreeNode *pNode)
         PostPrint(pNode->m_pRight);
         std::cout << pNode->m_nData << "\t";
     }
+}
+
+void BinaryTree::NonRecPreOrder()
+{
+    if (nullptr == m_pRoot)
+    {
+        return;
+    }
+    std::stack<BTreeNode*> nodeStack;
+    nodeStack.push(m_pRoot);
+    std::cout << "NonRecursionPreOrder: ";
+    while (!nodeStack.empty())
+    {
+        BTreeNode *pNode = nodeStack.top();
+        std::cout << pNode->m_nData << "\t";
+        nodeStack.pop();
+        if (nullptr != pNode->m_pRight)
+        {
+            nodeStack.push(pNode->m_pRight);
+        }
+        if (nullptr != pNode->m_pLeft)
+        {
+            nodeStack.push(pNode->m_pLeft);
+        }
+    }
+    std::cout << std::endl;
+}
+
+void BinaryTree::NonRecInOrder()
+{
+    if (nullptr == m_pRoot)
+    {
+        return;
+    }
+    std::stack<BTreeNode*> nodeStack;
+    nodeStack.push(m_pRoot);
+    while (!nodeStack.empty())
+    {
+        BTreeNode *pNode = nodeStack.top();
+        while (nullptr != pNode->m_pRight)
+        {
+            nodeStack.push(pNode->m_pRight);
+            pNode = pNode->m_pRight;
+        }
+        while (nullptr != pNode->m_pLeft)
+        {
+            nodeStack.push(pNode->m_pLeft);
+            pNode = pNode->m_pLeft;
+        }
+        BTreeNode *pCur = nodeStack.top();
+        std::cout << pCur->m_nData << "\t";
+        nodeStack.pop();
+    }
+}
+
+void BinaryTree::NonRecPostOrder()
+{
+
 }
 

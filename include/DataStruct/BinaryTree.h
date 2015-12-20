@@ -15,7 +15,11 @@ public:
     void PreOrder();
     void InOrder();
     void PostOrder();
-    void NonRecTraverse();
+
+    void NonRecPreOrder();
+    void NonRecInOrder();
+    void NonRecPostOrder();
+
     void Clear();
 
     BTreeNode* Root();
