@@ -38,7 +38,7 @@ int main()
     pTree->InOrder();
     pTree->PostOrder();
     pTree->NonRecPreOrder();
-    //pTree->NonRecInOrder();
+    pTree->NonRecInOrder();
     
     system("pause");
     return 1;

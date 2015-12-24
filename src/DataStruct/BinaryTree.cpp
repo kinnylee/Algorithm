@@ -143,19 +143,18 @@ void BinaryTree::NonRecInOrder()
     while (!nodeStack.empty())
     {
         BTreeNode *pNode = nodeStack.top();
-        while (nullptr != pNode->m_pRight)
+        if (nullptr != pNode->m_pRight)
         {
             nodeStack.push(pNode->m_pRight);
-            pNode = pNode->m_pRight;
         }
-        while (nullptr != pNode->m_pLeft)
+        if (nullptr != pNode->m_pLeft)
         {
             nodeStack.push(pNode->m_pLeft);
-            pNode = pNode->m_pLeft;
         }
-        BTreeNode *pCur = nodeStack.top();
-        std::cout << pCur->m_nData << "\t";
-        nodeStack.pop();
+        if (pNode->m_pLeft == nullptr && pNode->m_pRight == nullptr)
+        {
+            break;
+        }
     }
 }
 

@@ -28,4 +28,13 @@ typedef struct BTreeNode
     BTreeNode *m_pRight;
 }BTreeNode;
 
+typedef struct BSearchTreeNode
+{
+    
+    int m_nData;
+    BSearchTreeNode *m_pParent;
+    BSearchTreeNode *m_pLeft;
+    BSearchTreeNode *m_pRight;
+}BSearchTreeNode;
+
 #endif
