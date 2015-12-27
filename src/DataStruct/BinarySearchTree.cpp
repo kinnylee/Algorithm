@@ -6,11 +6,7 @@ BinarySearchTree::BinarySearchTree(int nRootData) : m_nSize(0)
 {
     if (nRootData != -1)
     {
-        m_pRoot = new BSearchTreeNode;
-        m_pRoot->m_nData = nRootData;
-        m_pRoot->m_pLeft = nullptr;
-        m_pRoot->m_pRight = nullptr;
-        m_pRoot->m_pParent = nullptr;
+        m_pRoot = NewNode(nRootData);
         ++m_nSize;
     }
 }
@@ -181,9 +177,7 @@ void BinarySearchTree::PreOrder()
 
 BSearchTreeNode* BinarySearchTree::Insert(int nKey)
 {
-    BSearchTreeNode *pNode = new BSearchTreeNode;
-    pNode->m_nData = nKey;
-    pNode->m_pLeft = pNode->m_pRight = nullptr;
+    BSearchTreeNode *pNode = NewNode(nKey);
 
     if (nullptr == m_pRoot)
     {
@@ -336,7 +330,7 @@ BSearchTreeNode* BinarySearchTree::NewNode(int nKey)
 {
     BSearchTreeNode *pNewNode = new BSearchTreeNode;
     pNewNode->m_nData = nKey;
-    pNewNode->m_pLeft = pNewNode->m_pRight = nullptr;
+    pNewNode->m_pLeft = pNewNode->m_pRight = pNewNode->m_pParent = nullptr;
     return pNewNode;
 }
 

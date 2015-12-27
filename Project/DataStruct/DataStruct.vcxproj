@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\DataStruct\BinaryParSuccTree.cpp" />
     <ClCompile Include="..\..\src\DataStruct\BinarySearchTree.cpp" />
     <ClCompile Include="..\..\src\DataStruct\BinaryTree.cpp" />
     <ClCompile Include="..\..\src\DataStruct\CyclicLinkList.cpp" />
@@ -174,6 +175,7 @@
     <ClCompile Include="..\..\src\DataStruct\StackList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\DataStruct\BinaryParSuccTree.h" />
     <ClInclude Include="..\..\include\DataStruct\BinarySearchTree.h" />
     <ClInclude Include="..\..\include\DataStruct\BinaryTree.h" />
     <ClInclude Include="..\..\include\DataStruct\CyclicLinkList.h" />

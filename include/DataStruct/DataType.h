@@ -30,11 +30,17 @@ typedef struct BTreeNode
 
 typedef struct BSearchTreeNode
 {
-    
     int m_nData;
     BSearchTreeNode *m_pParent;
     BSearchTreeNode *m_pLeft;
     BSearchTreeNode *m_pRight;
 }BSearchTreeNode;
+
+typedef struct BParSuccTreeNode
+{
+    int m_nData;
+    BParSuccTreeNode *m_pParent;
+    BParSuccTreeNode *m_pSuccessor;
+}BParSuccTreeNode;
 
 #endif
