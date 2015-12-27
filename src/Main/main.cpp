@@ -32,10 +32,10 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 int main()
 {
     BinarySearchTree *pRoot = new BinarySearchTree(15);
-    pRoot->Insert(6);
-    pRoot->Insert(18);
-    pRoot->Insert(3);
-    pRoot->Insert(7);
+    pRoot->CursionInsert(6);
+    pRoot->CursionInsert(18);
+    pRoot->CursionInsert(3);
+    pRoot->CursionInsert(7);
 
     pRoot->PreOrder();
     

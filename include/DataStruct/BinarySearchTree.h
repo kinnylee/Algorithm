@@ -24,13 +24,19 @@ public:
     BSearchTreeNode* Predecessor(BSearchTreeNode *pNode);
 
     BSearchTreeNode* Insert(int nKey);
+    BSearchTreeNode* CursionInsert(int nKey);
+    void Delete(BSearchTreeNode *pNode);
+    void Delete(int nKey);
 
     void PreOrder();
 
 private:
     BSearchTreeNode* CursionSearch(BSearchTreeNode *pNode, int nKey);
+    BSearchTreeNode* CursionInsert(BSearchTreeNode *pNode, int nKey);
     BSearchTreeNode* CursionMinimumSub(BSearchTreeNode *pNode);
     BSearchTreeNode* CursionMaximumSub(BSearchTreeNode *pNode);
+    void Transplant(BSearchTreeNode *pObject, BSearchTreeNode *pSubject);
+    BSearchTreeNode* NewNode(int nKey);
 
 private:
     BSearchTreeNode *m_pRoot;
