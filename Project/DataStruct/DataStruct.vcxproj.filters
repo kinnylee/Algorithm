@@ -57,6 +57,9 @@
     <ClCompile Include="..\..\src\DataStruct\BinaryParSuccTree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\DataStruct\RedBlackTree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\DataStruct\DataStruct_Global.h">
@@ -105,6 +108,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\DataStruct\BinaryParSuccTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\DataStruct\RedBlackTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -43,4 +43,18 @@ typedef struct BParSuccTreeNode
     BParSuccTreeNode *m_pSuccessor;
 }BParSuccTreeNode;
 
+enum NodeColor
+{
+    red,
+    black
+};
+typedef struct RedBlackNode
+{
+    int m_nData;
+    NodeColor m_nColor;
+    RedBlackNode *m_pParent;
+    RedBlackNode *m_pLeft;
+    RedBlackNode *m_pRight;
+}RedBlackNode;
+
 #endif
