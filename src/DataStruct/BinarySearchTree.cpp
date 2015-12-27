@@ -1,6 +1,8 @@
+#include <iostream>
+
 #include "BinarySearchTree.h"
 
-BinarySearchTree::BinarySearchTree(int nRootData)
+BinarySearchTree::BinarySearchTree(int nRootData) : m_nSize(0)
 {
     if (nRootData != -1)
     {
@@ -160,5 +162,60 @@ BSearchTreeNode* BinarySearchTree::Predecessor(BSearchTreeNode *pNode)
         pParent = pNode->m_pParent;
     }
     return pParent;
+}
+
+void BinarySearchTree::PreOrder()
+{
+    BSearchTreeNode *pMinNode = Minimum();
+    std::cout << pMinNode->m_nData << "\t";
+
+    BSearchTreeNode *pSuccessor = nullptr;
+    for (int i = 0; i < m_nSize - 1; i++)
+    {
+        pSuccessor = Successor(pMinNode);
+        std::cout << pSuccessor->m_nData << "\t";
+        pMinNode = pSuccessor;
+    }
+}
+
+BSearchTreeNode* BinarySearchTree::Insert(int nKey)
+{
+    BSearchTreeNode *pNode = new BSearchTreeNode;
+    pNode->m_nData = nKey;
+    pNode->m_pLeft = pNode->m_pRight = nullptr;
+
+    if (nullptr == m_pRoot)
+    {
+        m_pRoot = pNode;
+    }
+    else
+    {
+        BSearchTreeNode *pCurr = m_pRoot;
+        BSearchTreeNode *pParent = nullptr;
+        while (nullptr != pCurr)
+        {
+            pParent = pCurr;
+            if (nKey <= pCurr->m_nData)
+            {
+                pCurr = pCurr->m_pLeft;
+            }
+            else if (nKey > pCurr->m_nData)
+            {
+                pCurr = pCurr->m_pRight;
+            }
+        }
+
+        pNode->m_pParent = pParent;
+        if (pParent->m_nData >= nKey)
+        {
+            pParent->m_pLeft = pNode;
+        }
+        else
+        {
+            pParent->m_pRight = pNode;
+        }
+    }
+    ++m_nSize;
+    return pNode;
 }
 

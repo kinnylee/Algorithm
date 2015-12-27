@@ -1,8 +1,12 @@
 #include <process.h>
+#include <vector>
 #include <iostream>
 #include <objbase.h>
 #include <tchar.h>
 #include "comutil.h"
+
+#include "ProcessOuterCOMServer_i.h"
+#include "ProcessOuterCOMServer_i.c"
 
 #include "SortTest.h"
 #include "Common.h"
@@ -16,10 +20,8 @@
 #include "CyclicLinkList.h"
 #include "QueueList.h"
 #include "BinaryTree.h"
+#include "BinarySearchTree.h"
 
-#include "ProcessOuterCOMServer_i.h"
-#include "ProcessOuterCOMServer_i.c"
-#include <vector>
 
 unsigned a[10] = { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1 };
 unsigned b[10] = { 1, 0, 0, 1, 1, 0, 0, 1, 1, 1 };
@@ -29,20 +31,28 @@ int s_array[s_nArraySize] = { 5, 0, 3, 9, 4, 8, 7, 1, 2, 6 };
 
 int main()
 {
-    BinaryTree *pTree = new BinaryTree(5);
-    BTreeNode *pLeft = pTree->InsertLeftNode(pTree->Root(), 6);
-    BTreeNode *pRight = pTree->InsertRightNode(pTree->Root(), 7);
-    pTree->InsertRightNode(pLeft, 8);
-    pTree->InsertLeftNode(pRight, 9);
-    pTree->PreOrder();
-    pTree->InOrder();
-    pTree->PostOrder();
-    pTree->NonRecPreOrder();
-    pTree->NonRecInOrder();
+    BinarySearchTree *pRoot = new BinarySearchTree(15);
+    pRoot->Insert(6);
+    pRoot->Insert(18);
+    pRoot->Insert(3);
+    pRoot->Insert(7);
+
+    pRoot->PreOrder();
     
     system("pause");
     return 1;
 }
+
+    //BinaryTree *pTree = new BinaryTree(5);
+    //BTreeNode *pLeft = pTree->InsertLeftNode(pTree->Root(), 6);
+    //BTreeNode *pRight = pTree->InsertRightNode(pTree->Root(), 7);
+    //pTree->InsertRightNode(pLeft, 8);
+    //pTree->InsertLeftNode(pRight, 9);
+    //pTree->PreOrder();
+    //pTree->InOrder();
+    //pTree->PostOrder();
+    //pTree->NonRecPreOrder();
+    //pTree->NonRecInOrder();
 
     //LinkList *pHead = new LinkList;
     //pHead->FrontInsert(1);

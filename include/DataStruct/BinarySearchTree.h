@@ -23,6 +23,10 @@ public:
     BSearchTreeNode* Successor(BSearchTreeNode *pNode);
     BSearchTreeNode* Predecessor(BSearchTreeNode *pNode);
 
+    BSearchTreeNode* Insert(int nKey);
+
+    void PreOrder();
+
 private:
     BSearchTreeNode* CursionSearch(BSearchTreeNode *pNode, int nKey);
     BSearchTreeNode* CursionMinimumSub(BSearchTreeNode *pNode);
@@ -30,6 +34,7 @@ private:
 
 private:
     BSearchTreeNode *m_pRoot;
+    int m_nSize;
 };
 
 #endif
