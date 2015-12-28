@@ -13,10 +13,12 @@ public:
     void LeftRotate(RedBlackNode *pNode);
     void RightRotate(RedBlackNode *pNode);
     void RBInsert(RedBlackNode *pNode);
+    void RBDelete(RedBlackNode *pNode);
 
 private:
     RedBlackNode* NewNode(int nKey, NodeColor color);
     void RBInsertFix(RedBlackNode *pNode);
+    void Transplant(RedBlackNode *pObject, RedBlackNode *pSubject);
 
 private:
     RedBlackNode *m_pRoot;

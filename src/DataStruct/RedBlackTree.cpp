@@ -125,6 +125,19 @@ void RedBlackTree::RBInsert(RedBlackNode *pNode)
     RBInsertFix(pNode);
 }
 
+/***
+    Six situations:
+    but we only research three situations, other three situations is symmetrical
+    1£ºparent is red, and uncle also red 
+            do: change parent and uncle color to black, and change grandfather to red,
+                the current point to grandfather
+    2£ºparent is red, but uncle is black, current node is parent right child 
+            do: the current point to parent and left rotate the current node
+            Because: situation 2 left rotate will become to situation 3
+    3£ºparent is red, but uncle is black, current node is parent left child 
+            do: the parent color change to black and the grandfather color change
+                to red, then right rotate the grandfather
+*/
 void RedBlackTree::RBInsertFix(RedBlackNode *pNode)
 {
     RedBlackNode *pUncle = nullptr;
@@ -157,7 +170,57 @@ void RedBlackTree::RBInsertFix(RedBlackNode *pNode)
                 LeftRotate(pNode->m_pParent->m_pParent);
             }
         }
+        else
+        {
+            pUncle = pNode->m_pParent->m_pLeft;
+            if (pUncle->m_nColor == red)
+            {
+                pNode->m_pParent->m_nColor = black;
+                pUncle->m_nColor = black;
+                pNode->m_pParent->m_pParent->m_nColor = red;
+                pNode = pNode->m_pParent->m_pParent;
+            }
+            else if (pNode == pNode->m_pParent->m_pLeft)
+            {
+                pNode = pNode->m_pParent;
+                RightRotate(pNode);
+                pNode->m_pParent->m_nColor = black;
+                pNode->m_pParent->m_pParent->m_nColor = red;
+                LeftRotate(pNode->m_pParent->m_pParent);
+            }
+            else
+            {
+                pNode = pNode->m_pParent;
+                LeftRotate(pNode);
+                pNode->m_pParent->m_nColor = black;
+                pNode->m_pParent->m_pParent->m_nColor = red;
+                RightRotate(pNode->m_pParent->m_pParent);
+            }
+        }
     }
     m_pRoot->m_nColor = black;
+}
+
+void RedBlackTree::Transplant(RedBlackNode *pObject, RedBlackNode *pSubject)
+{
+    if (m_pNull == pObject->m_pParent)
+    {
+        m_pRoot = pSubject;
+    }
+    else if (pObject == pObject->m_pParent->m_pLeft)
+    {
+        pObject->m_pParent->m_pLeft = pSubject;
+    }
+    else
+    {
+        pObject->m_pParent->m_pRight = pSubject;
+    }
+    pSubject->m_pParent = pObject->m_pParent;
+}
+
+void RedBlackTree::RBDelete(RedBlackNode *pNode)
+{
+    RedBlackNode *pPre = pNode;
+
 }
 
