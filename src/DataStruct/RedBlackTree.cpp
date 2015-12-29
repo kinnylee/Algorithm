@@ -201,7 +201,7 @@ void RedBlackTree::RBInsertFix(RedBlackNode *pNode)
     m_pRoot->m_nColor = black;
 }
 
-void RedBlackTree::Transplant(RedBlackNode *pObject, RedBlackNode *pSubject)
+void RedBlackTree::RBTransplant(RedBlackNode *pObject, RedBlackNode *pSubject)
 {
     if (m_pNull == pObject->m_pParent)
     {
@@ -220,7 +220,97 @@ void RedBlackTree::Transplant(RedBlackNode *pObject, RedBlackNode *pSubject)
 
 void RedBlackTree::RBDelete(RedBlackNode *pNode)
 {
-    RedBlackNode *pPre = pNode;
+    RedBlackNode *pPost = pNode;
+    RedBlackNode *pPostOrigin = nullptr;
+    NodeColor postOrigColor = pPost->m_nColor;
+    if (pNode->m_pLeft == m_pNull)
+    {
+        pPostOrigin = pNode->m_pRight;
+        RBTransplant(pNode, pNode->m_pRight);
+    }
+    else if (pNode->m_pRight == m_pNull)
+    {
+        pPostOrigin = pNode->m_pLeft;
+        RBTransplant(pNode, pNode->m_pLeft);
+    }
+    else
+    {
+        pPost = Mininum(pNode->m_pRight);
+        postOrigColor = pPost->m_nColor;
+        pPostOrigin = pPost->m_pRight;
+        if (pPost->m_pParent == pNode)
+        {
+            pPostOrigin->m_pParent = pPost;
+        }
+        else
+        {
+            RBTransplant(pPost, pPost->m_pRight);
+            pPost->m_pRight = pNode->m_pRight;
+            pPost->m_pRight->m_pParent = pPost;
+        }
+        RBTransplant(pNode, pPost);
+        pPost->m_pLeft = pNode->m_pLeft;
+        pPost->m_pLeft->m_pParent = pPost;
+        pPost->m_nColor = pNode->m_nColor;
+    }
 
+    if (postOrigColor == black)
+    {
+        RBDeleteFix(pPostOrigin);
+    }
+}
+
+void RedBlackTree::RBDeleteFix(RedBlackNode *pNode)
+{
+    while (pNode != m_pRoot && pNode->m_nColor == black)
+    {
+        if (pNode = pNode->m_pParent->m_pLeft)
+        {
+            RedBlackNode *pBrother = pNode->m_pParent->m_pRight;
+            if (pBrother->m_nColor == red)
+            {
+                pBrother->m_nColor = black;
+                pBrother->m_pParent->m_nColor = red;
+                LeftRotate(pNode->m_pParent);
+                pBrother = pNode->m_pParent->m_pRight;
+            }
+            if (pBrother->m_pLeft->m_nColor == black && pBrother->m_pRight->m_nColor == black)
+            {
+                pBrother->m_nColor = red;
+                pNode = pNode->m_pParent;
+            }
+            else if (pBrother->m_pRight->m_nColor = black)
+            {
+                pBrother->m_pLeft->m_nColor = black;
+                pBrother->m_nColor = red;
+                RightRotate(pBrother);
+                pBrother = pNode->m_pParent->m_pRight;
+            }
+
+            pBrother->m_nColor = pNode->m_pParent->m_nColor;
+            pNode->m_pParent->m_nColor = black;
+            pBrother->m_pRight->m_nColor = black;
+            LeftRotate(pNode->m_pParent);
+            pNode = m_pRoot;
+        }
+        else
+        {
+
+        }
+    }
+    pNode->m_nColor = black;
+}
+
+RedBlackNode* RedBlackTree::Mininum(RedBlackNode *pNode /*= nullptr*/)
+{
+    if (pNode == nullptr)
+    {
+        return m_pRoot;
+    }
+    while (nullptr != pNode->m_pLeft)
+    {
+        pNode = pNode->m_pLeft;
+    }
+    return pNode;
 }
 

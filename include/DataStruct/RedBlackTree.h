@@ -15,10 +15,13 @@ public:
     void RBInsert(RedBlackNode *pNode);
     void RBDelete(RedBlackNode *pNode);
 
+    RedBlackNode* Mininum(RedBlackNode *pNode = nullptr );
+
 private:
     RedBlackNode* NewNode(int nKey, NodeColor color);
     void RBInsertFix(RedBlackNode *pNode);
-    void Transplant(RedBlackNode *pObject, RedBlackNode *pSubject);
+    void RBDeleteFix(RedBlackNode *pNode);
+    void RBTransplant(RedBlackNode *pObject, RedBlackNode *pSubject);
 
 private:
     RedBlackNode *m_pRoot;
